@@ -1,0 +1,13 @@
+.row-search{
+  width: 100%;
+}
+.sidebarSearch{
+  border: 4px solid black;
+  width: 25%;
+}
+.list-group-item{
+  background-color: #85919D;
+}
+.contentSearch{
+  margin-left: 50px;
+}

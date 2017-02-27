@@ -1,0 +1,10 @@
+{
+    "hooks": {
+          "blueprints": false,
+          "orm": false,
+          "pubsub": false
+    },
+    "generators": {
+    "modules": {}
+  }
+}
