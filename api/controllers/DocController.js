@@ -9,7 +9,6 @@
 
 module.exports = {
 	findDoc: function (req, res) {
-    console.log(1);
   		DocService.findAll()
       .then(function (result) {
         return res.json(result);

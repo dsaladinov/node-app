@@ -34,7 +34,8 @@
     "sails-hook-sequelize-blueprints": "^0.3.0",
     "sails-parse": "^0.2.1",
     "sails-postgresql": "^0.11.4",
-    "sequelize": "^3.4.1"
+    "sequelize": "^3.4.1",
+    "skipper": "^0.8.0"
   },
   "scripts": {
     "debug": "node debug app.js",

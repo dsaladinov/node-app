@@ -44,5 +44,19 @@ module.exports = {
 
 			});
 
-	}
+	},
+  upload: function  (req, res) {
+    req.file('file').upload({
+    	dirname: 'uploads/',
+    },function (err, files) {
+      if (err)
+        return res.serverError(err);
+
+      return res.json({
+        message: files.length + ' Выгрузка файл(ов) завершена!',
+        files: files
+      });
+    });
+  }
+
 };

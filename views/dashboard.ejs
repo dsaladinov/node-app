@@ -12,11 +12,19 @@
   <link rel="stylesheet" href="/styles/styleSearch.css">
   <!--STYLES END-->
   <!--Added this so the client has access to the csrf tag and it's grabbed first service side on every page -->
-  <script src='//cloud.tinymce.com/stable/tinymce.min.js'></script>
-  <script>
+<script src="http://cloud.tinymce.com/stable/tinymce.min.js?apiKey=kpch0o9bnlaifiig996144rw0ngws4o7urxv5fnxjhcg5u2x"></script>  <script>
   tinymce.init({
     selector: '#mytextarea',
-    plugins : 'advlist autolink link image lists charmap print preview'
+    theme: 'modern',
+     height: 600,
+     plugins: [
+     'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
+     'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+     'save table contextmenu directionality emoticons template paste textcolor'
+   ],
+   content_css: 'css/content.css',
+   toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons'
+
   });
   </script>
 </head>
@@ -65,17 +73,17 @@
       <div class="row" ng-hide="backToOne">
         <div class="col-md-6 ">
           <div class="btn-group-vertical btn-block">
-            <a class="btn btn-default" href="#" ng-model="notac" ng-click="notacClick()">
+            <a class="btn btn-default" href="#" ng-model="notac" ng-click="docOtchujClick()">
               <i class="fa fa-file-text fa-4x fa-pull-left" aria-hidden="true"></i>
               <label>Договоры отчуждения недвижимого имущества</label>
             </a><br>
-            <a class="btn btn-default " href="#" ng-model="notac" ng-click="notacClick()">
+            <a class="btn btn-default " href="#" ng-model="notac" ng-click="docZayavleniyaClick()">
               <i class="fa fa-file-text-o fa-4x fa-pull-right " aria-hidden="true"></i>
-              Заявления
+              <label>Заявления</label>
             </a><br>
-            <a class="btn btn-default" href="#">
+            <a class="btn btn-default" href="#" ng-model="notac" ng-click="docZaveshaniyaClick()">
               <i class="fa fa-file-o fa-4x" aria-hidden="true"></i>
-              Завещания
+              <label>Завещания</label>
             </a>
           </div>
         </div>
@@ -83,19 +91,19 @@
 
         <div class="col-md-6">
           <div class="btn-group-vertical btn-block">
-            <a class="btn btn-default " href="#">
+            <a class="btn btn-default " href="#" ng-model="notac" ng-click="docDoverennostiClick()">
               <i class="fa fa-file fa-4x "></i>
-              Доверенности
+              <label>Доверенности</label>
             </a>
             <br>
-            <a class="btn btn-default " href="#">
+            <a class="btn btn-default " href="#" ng-model="notac" ng-click="docNasledstvaClick()">
               <i class = "fa fa-file-text fa-4x"></i>
-              Нотариальные действия и акты при оформлении наследства
+              <label>Нотариальные действия и акты при оформлении наследства</label>
             </a>
             <br>
-            <a class="btn btn-default " href="#">
+            <a class="btn btn-default " href="#" ng-model="notac" ng-click="docProchieClick()">
               <i class = "fa fa-file-text fa-4x"></i>
-              Документы по прочим нотариальным действиям
+              <label>Документы по прочим нотариальным действиям</label>
             </a>
           </div>
         </div>
@@ -103,9 +111,9 @@
       <br>
       <div class="row" ng-hide="backToOne">
         <div class="col-md-12">
-          <a class="btn btn-default btn-block" href="#">
+          <a class="btn btn-default btn-block" href="#" ng-model="notac" ng-click="docProchieDogovoraClick()">
             <i class = "fa fa-file-text fa-4x"></i>
-            Прочие документы
+            <label>Прочие документы</label>
             </a
           </div>
         </div>
@@ -124,7 +132,7 @@
         <div class="">
           <ul class="nav nav-tabs">
             <li class="active">
-              <a href="#1" data-toggle="tab">Кто</a>
+              <a href="#1" data-toggle="tab">Ктооооо</a>
             </li>
             <li><a href="#2" data-toggle="tab" ng-model="tab">Автотранспорт</a>
             </li>
@@ -280,7 +288,7 @@
     <select class="form-control selectpicker form-group col-md-3"  title="Выберите...">
       <option value="1">Женат / Замужем</option>
       <option value="2">Не женат / Не замужем</option>
-      <option value="3">Разведен / Не замужем</option>
+      <option value="3">Разведен / Разведена</option>
     </select>
   </div>
 </div>
@@ -298,13 +306,11 @@
   </span>
 </div>
 </div>
-
-
 </div>
 </div>
 <div class="tab-pane" id="2">
   <div class="fiz_clients">
-    <label ng-show="clients == '1'">Марка и модель автомобиля</label>
+    <label ng-show="clients == '1'">Марка и модель автомобиля ехуу</label>
     <div class="control-group form-group col-md-12"
     ng-class="">
     <input type="text"  ng-show="clients == '1'"  class="form-control " placeholder="Например: BMW X5" name="car-model" ng-model="signupForm.car-model" ng-maxlength="50" required>
@@ -357,10 +363,14 @@
   data-ng-options="detail.SpravochnikAS.title for detail in sprList track by detail.id">
   <option value="">Выберите</option>
 </select>
+<form action="/nota_act/upload" enctype="multipart/form-data" method="post">
+<input type="file" name="avatar" multiple="multiple"><br>
+<input type="submit" value="Загрузить">
+</form>
 </div>
 
-<button class="btn btn-primary btn-lg btn-block" type="submit" ng-disabled="signup.$invalid" ng-model="lastDog" ng-click="lastDogClick()">
-  <span ng-show="!signupForm.loading">Сканировать</span>
+<button class="btn btn-primary btn-lg btn-block" type="submit" ng-disabled="signup.$invalid" ng-model="lastDoc" ng-click="lastDocClick()">
+  <span ng-show="!signupForm.loading">Далее</span>
   <span class="overlord-loading-spinner fa fa-spinner" ng-show="signupForm.loading" ></span>
   <span ng-show="signupForm.loading">Подготовка к оформлению...</span>
 </button>
@@ -368,15 +378,15 @@
 <input type="hidden" name="_csrf" value="<%= _csrf %>" />
 </div>
 </form>
-<form method="post" ng-show="lastDog" >
-  <h3>Оформление договора</h3>
-   <textarea id="mytextarea" ng-style="margin-left:150px;">Договор купля продажа №1</textarea>
-   <br>
-   <button class="btn btn-primary" type="submit" ng-disabled="signup.$invalid" ng-model="lastDog" ng-click="lastDogClick()">
-     <span ng-show="!signupForm.loading">Оформить</span>
-     <span class="overlord-loading-spinner fa fa-spinner" ng-show="signupForm.loading" ></span>
-     <span ng-show="signupForm.loading">Подготовка к оформлению...</span>
-   </button>
+<form method="post" ng-show="lastDoc" ng-model="notac">
+    <h3>Оформление договора</h3>
+     <textarea id="mytextarea" ng-style="margin-left:150px;">Договор купля продажа №1</textarea>
+     <br>
+     <button class="btn btn-primary" type="submit" ng-disabled="signup.$invalid" ng-model="lastDoc" ng-click="lastDocClick()">
+       <span ng-show="!signupForm.loading">Оформить</span>
+       <span class="overlord-loading-spinner fa fa-spinner" ng-show="signupForm.loading" ></span>
+       <span ng-show="signupForm.loading">Подготовка к оформлению...</span>
+     </button>
  </form>
 <!--SCRIPTS-->
 <script src="/js/dependencies/sails.io.js"></script>
