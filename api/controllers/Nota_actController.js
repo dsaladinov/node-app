@@ -22,18 +22,6 @@ module.exports = {
           date           : req.param('date')
 			};
 
-      // Doc_otchujdenya.findAll({
-      //     include: [{
-      //       model: Nota_act, as: 'NotactAS', include: [{ model: Spravochnik, as: 'SpravochnikAS'}]
-      //     }]
-      //                })
-      // .then(function (docs) {
-      //   return res.view({ docs: docs});
-      // })
-      // .catch(function (err) {
-      //   return res.status(500).json({error: err});
-      // });
-
 			Nota_act.create(data).exec(function (err, acts) {
 
 					res.redirect('/nota_act/create');

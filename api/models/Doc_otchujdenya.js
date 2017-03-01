@@ -20,11 +20,8 @@ module.exports = {
       type: Sequelize.TEXT,
       field: "title"
     }
-
   },
   associations: function () {
-  //Doc_otchujdenya.belongsTo(Spravochnik,{as:"SpravochnikAS",foreignKey:'spr'}),
-
   Doc_otchujdenya.hasMany(Nota_act,{as:"NotactAS",foreignKey:'doc_name_id'})
 
   },

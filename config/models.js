@@ -11,7 +11,6 @@ module.exports.models = {
    * In this example, we'll assume you created a folder in your project,     *
    * `config/ssl` and dumped your certificate/key files there:               *
    ***************************************************************************/
-
   // ssl: {
   //   ca: require('fs').readFileSync(__dirname + './ssl/my_apps_ssl_gd_bundle.crt'),
   //   key: require('fs').readFileSync(__dirname + './ssl/my_apps_ssl.key'),

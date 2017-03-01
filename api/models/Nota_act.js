@@ -33,11 +33,16 @@ module.exports = {
     },
     doc_name_id: {
       type: Sequelize.INTEGER,
+      unique:true,
       field: "doc_name_id"
     },
     spr_name_id:{
       type: Sequelize.INTEGER,
       field:"spr_name_id"
+    },
+    uslugi_name_id:{
+      type: Sequelize.INTEGER,
+      field:"uslugi_name_id"
     }
 
   },
@@ -63,7 +68,9 @@ module.exports = {
       Zayavleniya.belongsTo(Zayavleniya,{as:"ZayavleniyAS",foreignKey:'doc_name_id'}),
       Nota_act.belongsTo(Zayavleniya,{as:"ZayavleniyAS",foreignKey:'doc_name_id'}),
 
-      Nota_act.belongsTo(Spravochnik,{as:"SpravochnikAS",foreignKey:'spr_name_id'})
+      Nota_act.belongsTo(Spravochnik,{as:"SpravochnikAS",foreignKey:'spr_name_id'}),
+      Nota_act.belongsTo(Uslugi,{as:"UslugiAS",foreignKey:'uslugi_name_id'})
+
     },
   options: {
     tableName: "nota_act",

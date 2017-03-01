@@ -16,18 +16,13 @@ module.exports = {
       unique: "id_pkey_uslugi",
       allowNull: false
     },
-     service_name  :{
-      type: Sequelize.STRING,
-      required:true
-    },
-     price  :{
-      type: 'float',
-      required:true
-    },
      gos_poshlina  :{
-      type: Sequelize.STRING,
-      required:true
+      type: Sequelize.INTEGER,
+      field:"gos_poshlina"
     }
+  },
+  associations: function () {
+    Uslugi.hasMany(Nota_act,{as:"NotactAS",foreignKey:'uslugi_name_id'})
   },
   options: {
     tableName:  "uslugi" ,

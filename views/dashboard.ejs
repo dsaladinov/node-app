@@ -113,7 +113,7 @@
         <div class="col-md-12">
           <a class="btn btn-default btn-block" href="#" ng-model="notac" ng-click="docProchieDogovoraClick()">
             <i class = "fa fa-file-text fa-4x"></i>
-            <label>Прочие документы</label>
+            <label>Прочие договоры</label>
             </a
           </div>
         </div>
@@ -134,7 +134,7 @@
             <li class="active">
               <a href="#1" data-toggle="tab">Ктооооо</a>
             </li>
-            <li><a href="#2" data-toggle="tab" ng-model="tab">Автотранспорт</a>
+            <li><a href="#2" data-toggle="tab">Автотранспорт</a>
             </li>
             <li><a href="#3" data-toggle="tab">Кому</a>
             </li>
@@ -313,8 +313,7 @@
     <label ng-show="clients == '1'">Марка и модель автомобиля ехуу</label>
     <div class="control-group form-group col-md-12"
     ng-class="">
-    <input type="text"  ng-show="clients == '1'"  class="form-control " placeholder="Например: BMW X5" name="car-model" ng-model="signupForm.car-model" ng-maxlength="50" required>
-
+    <input type="text"  ng-show="clients == '1'"  class="form-control " placeholder="Например: BMW X5" name="car-model" ng-model="signupForm.name" ng-maxlength="50" required>
     <span class="help-block has-error" ng-if="signup.name.$dirty">
       <span ng-show="signup.name.$error.required">Марка и модель обязательно для заполнения.</span>
       <span ng-show="signup.name.$error.maxlength">Марка и модель не может быть более 50 символов.</span>
@@ -363,10 +362,16 @@
   data-ng-options="detail.SpravochnikAS.title for detail in sprList track by detail.id">
   <option value="">Выберите</option>
 </select>
+<br>
+<label>Маржа:</label>
+<input type="text" data-ng-model="marja" class="form-control" data-ng-change="priceCalc(marja, selectedUsl)">
+<br>
+<label for="">Цена: {{ price }}</label>
 <form action="/nota_act/upload" enctype="multipart/form-data" method="post">
 <input type="file" name="avatar" multiple="multiple"><br>
-<input type="submit" value="Загрузить">
+<input type="submit" value="Обзор">
 </form>
+
 </div>
 
 <button class="btn btn-primary btn-lg btn-block" type="submit" ng-disabled="signup.$invalid" ng-model="lastDoc" ng-click="lastDocClick()">
@@ -380,7 +385,7 @@
 </form>
 <form method="post" ng-show="lastDoc" ng-model="notac">
     <h3>Оформление договора</h3>
-     <textarea id="mytextarea" ng-style="margin-left:150px;">Договор купля продажа №1</textarea>
+     <textarea id="mytextarea">Договор купля продажа №1</textarea>
      <br>
      <button class="btn btn-primary" type="submit" ng-disabled="signup.$invalid" ng-model="lastDoc" ng-click="lastDocClick()">
        <span ng-show="!signupForm.loading">Оформить</span>

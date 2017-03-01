@@ -3,6 +3,7 @@ function ($scope, $http) {
 
   $scope.notac = false;
   $scope.backToOne = false;
+
   $scope.docs = function() {
       $scope.notac = false;
       $scope.backToOne = false;
@@ -19,7 +20,9 @@ function ($scope, $http) {
       $scope.docChange = function (value) {
 
       $scope.sprList = value.NotactAS;
+      $scope.uslugiList = value.NotactAS;
       console.log($scope.sprList );
+      console.log($scope.uslugiList );
   };
     });
 
@@ -33,6 +36,7 @@ function ($scope, $http) {
     {
       $scope.docList2 = data;
       $scope.docChange = function (value) {
+        $scope.uslugiList = value.NotactAS;
 
       $scope.sprList = value.NotactAS;
       console.log($scope.sprList );
@@ -49,6 +53,7 @@ function ($scope, $http) {
     {
       $scope.docList2 = data;
       $scope.docChange = function (value) {
+        $scope.uslugiList = value.NotactAS;
 
       $scope.sprList = value.NotactAS;
       console.log($scope.sprList );
@@ -64,6 +69,7 @@ function ($scope, $http) {
     {
       $scope.docList2 = data;
       $scope.docChange = function (value) {
+        $scope.uslugiList = value.NotactAS;
 
       $scope.sprList = value.NotactAS;
       console.log($scope.sprList );
@@ -80,6 +86,7 @@ function ($scope, $http) {
     {
       $scope.docList2 = data;
       $scope.docChange = function (value) {
+        $scope.uslugiList = value.NotactAS;
 
       $scope.sprList = value.NotactAS;
       console.log($scope.sprList );
@@ -96,9 +103,14 @@ function ($scope, $http) {
     {
       $scope.docList2 = data;
       $scope.docChange = function (value) {
-
+      $scope.uslugiList = value.NotactAS;
       $scope.sprList = value.NotactAS;
       console.log($scope.sprList );
+      console.log($scope.uslugiList.gos_poshlina);
+        $scope.priceCalc = function() {
+          var price = parseInt($scope.marja) + parseInt($scope.selectedUsl.UslugiAS.gos_poshlina);
+          $scope.price = price;
+      }
   };
     });
 
@@ -112,6 +124,7 @@ function ($scope, $http) {
     {
       $scope.docList2 = data;
       $scope.docChange = function (value) {
+      $scope.uslugiList = value.NotactAS;
 
       $scope.sprList = value.NotactAS;
       console.log($scope.sprList );

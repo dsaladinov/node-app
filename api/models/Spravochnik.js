@@ -18,7 +18,7 @@ module.exports = {
     },
     title: {
       type: Sequelize.TEXT,
-      field: "title_doc"
+      field: "title"
     }
 
   },
