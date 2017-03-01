@@ -363,11 +363,8 @@
   <option value="">Выберите</option>
 </select>
 <br>
-<select data-ng-model="selectedUsl" class="form-control" data-ng-options="detail.UslugiAS.gos_poshlina for detail in uslugiList track by detail.id">
-</select>
-<br>
 <label>Маржа:</label>
-<input type="text" data-ng-model="marja" class="form-control" data-ng-change="priceCalc(marja, selectedUsl)">
+<input type="number" data-ng-model="marja" class="form-control" data-ng-change="priceCalc()">
 <br>
 <label>Цена: {{ price }}</label>
 <form action="/nota_act/upload" enctype="multipart/form-data" method="post">

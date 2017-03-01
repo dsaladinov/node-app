@@ -18,11 +18,16 @@ function ($scope, $http) {
     {
       $scope.docList2 = data;
       $scope.docChange = function (value) {
-
       $scope.sprList = value.NotactAS;
-      $scope.uslugiList = value.NotactAS;
-      console.log($scope.sprList );
-      console.log($scope.uslugiList );
+      $scope.gos_poshlina = $scope.sprList[0].UslugiAS.gos_poshlina; // TODO нужно будет сделать динамически.
+      $scope.priceCalc = function() {
+        if($scope.marja == null) {
+          $scope.price = parseInt($scope.gos_poshlina);
+        }
+        else {
+          $scope.price = parseInt($scope.marja) + parseInt($scope.gos_poshlina);
+        }
+    }
   };
     });
 
@@ -36,10 +41,16 @@ function ($scope, $http) {
     {
       $scope.docList2 = data;
       $scope.docChange = function (value) {
-        $scope.uslugiList = value.NotactAS;
-
       $scope.sprList = value.NotactAS;
-      console.log($scope.sprList );
+      $scope.gos_poshlina = $scope.sprList[0].UslugiAS.gos_poshlina; // TODO нужно будет сделать динамически.
+      $scope.priceCalc = function() {
+        if($scope.marja == null) {
+          $scope.price = parseInt($scope.gos_poshlina);
+        }
+        else {
+          $scope.price = parseInt($scope.marja) + parseInt($scope.gos_poshlina);
+        }
+    }
   };
     });
 
@@ -53,10 +64,16 @@ function ($scope, $http) {
     {
       $scope.docList2 = data;
       $scope.docChange = function (value) {
-        $scope.uslugiList = value.NotactAS;
-
       $scope.sprList = value.NotactAS;
-      console.log($scope.sprList );
+      $scope.gos_poshlina = $scope.sprList[0].UslugiAS.gos_poshlina; // TODO нужно будет сделать динамически.
+      $scope.priceCalc = function() {
+        if($scope.marja == null) {
+          $scope.price = parseInt($scope.gos_poshlina);
+        }
+        else {
+          $scope.price = parseInt($scope.marja) + parseInt($scope.gos_poshlina);
+        }
+    }
   };
     });
   }
@@ -69,10 +86,16 @@ function ($scope, $http) {
     {
       $scope.docList2 = data;
       $scope.docChange = function (value) {
-        $scope.uslugiList = value.NotactAS;
-
       $scope.sprList = value.NotactAS;
-      console.log($scope.sprList );
+      $scope.gos_poshlina = $scope.sprList[0].UslugiAS.gos_poshlina; // TODO нужно будет сделать динамически.
+      $scope.priceCalc = function() {
+        if($scope.marja == null) {
+          $scope.price = parseInt($scope.gos_poshlina);
+        }
+        else {
+          $scope.price = parseInt($scope.marja) + parseInt($scope.gos_poshlina);
+        }
+    }
   };
     });
 
@@ -86,10 +109,16 @@ function ($scope, $http) {
     {
       $scope.docList2 = data;
       $scope.docChange = function (value) {
-        $scope.uslugiList = value.NotactAS;
-
       $scope.sprList = value.NotactAS;
-      console.log($scope.sprList );
+      $scope.gos_poshlina = $scope.sprList[0].UslugiAS.gos_poshlina; // TODO нужно будет сделать динамически.
+      $scope.priceCalc = function() {
+        if($scope.marja == null) {
+          $scope.price = parseInt($scope.gos_poshlina);
+        }
+        else {
+          $scope.price = parseInt($scope.marja) + parseInt($scope.gos_poshlina);
+        }
+    }
   };
     });
 
@@ -103,13 +132,16 @@ function ($scope, $http) {
     {
       $scope.docList2 = data;
       $scope.docChange = function (value) {
-      $scope.uslugiList = value.NotactAS;
       $scope.sprList = value.NotactAS;
-      console.log($scope.sprList );
-      console.log($scope.uslugiList.gos_poshlina);
+      $scope.gos_poshlina = $scope.sprList[0].UslugiAS.gos_poshlina; // TODO нужно будет сделать динамически.
+
         $scope.priceCalc = function() {
-          var price = parseInt($scope.marja) + parseInt($scope.selectedUsl.UslugiAS.gos_poshlina);
-          $scope.price = price;
+          if($scope.marja == null) {
+            $scope.price = parseInt($scope.gos_poshlina);
+          }
+          else {
+            $scope.price = parseInt($scope.marja) + parseInt($scope.gos_poshlina);
+          }
       }
   };
     });
@@ -124,10 +156,16 @@ function ($scope, $http) {
     {
       $scope.docList2 = data;
       $scope.docChange = function (value) {
-      $scope.uslugiList = value.NotactAS;
-
       $scope.sprList = value.NotactAS;
-      console.log($scope.sprList );
+      $scope.gos_poshlina = $scope.sprList[0].UslugiAS.gos_poshlina; // TODO нужно будет сделать динамически.
+      $scope.priceCalc = function() {
+        if($scope.marja == null) {
+          $scope.price = parseInt($scope.gos_poshlina);
+        }
+        else {
+          $scope.price = parseInt($scope.marja) + parseInt($scope.gos_poshlina);
+        }
+    }
   };
     });
 
