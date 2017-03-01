@@ -1,0 +1,23 @@
+{
+  "name": "notchik",
+  "description": "a Sails application",
+  "main": "app.js",
+  "authors": [
+    "danchik"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "^1.1.3",
+    "angular-ui-tinymce": "^0.0.18",
+    "bootstrap-vertical-tabs": "^1.2.2",
+    "tinymce": "^4.5.4"
+  }
+}

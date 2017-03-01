@@ -1,8 +1,38 @@
-angular.module('DashboardModule', []).controller ('DashboardController',
+angular.module('DashboardModule',  ['ui.tinymce']).controller ('DashboardController',
 function ($scope, $http) {
 
   $scope.notac = false;
   $scope.backToOne = false;
+  // tinymce.init({
+  //   selector: '#mytextarea',
+  //   theme: 'modern',
+  //    height: 600,
+  //    plugins: [
+  //    'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
+  //    'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+  //    'save table contextmenu directionality emoticons template paste textcolor'
+  //  ],
+  //  content_css: 'css/content.css',
+  //  toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons'
+  //
+  // });
+
+
+  $scope.tinymceOptions = {
+    selector: '#mytextarea',
+    theme: 'modern',
+     height: 600,
+     plugins: [
+     'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
+     'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+     'save table contextmenu directionality emoticons template paste textcolor code'
+   ],
+   content_css: 'css/content.css',
+   toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons| code'
+    //
+    // plugins: 'link image code',
+    // toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code'
+  };
 
   $scope.docs = function() {
       $scope.notac = false;
@@ -65,6 +95,7 @@ function ($scope, $http) {
       $scope.docList2 = data;
       $scope.docChange = function (value) {
       $scope.sprList = value.NotactAS;
+
       $scope.gos_poshlina = $scope.sprList[0].UslugiAS.gos_poshlina; // TODO нужно будет сделать динамически.
       $scope.priceCalc = function() {
         if($scope.marja == null) {
@@ -130,11 +161,13 @@ function ($scope, $http) {
 
     $http.get('/zayavleniya/findAll').success(function(data)
     {
+
       $scope.docList2 = data;
       $scope.docChange = function (value) {
       $scope.sprList = value.NotactAS;
-      $scope.gos_poshlina = $scope.sprList[0].UslugiAS.gos_poshlina; // TODO нужно будет сделать динамически.
+      $scope.docTitle = $scope.selectedDoc.title;
 
+      $scope.gos_poshlina = $scope.sprList[0].UslugiAS.gos_poshlina; // TODO нужно будет сделать динамически.
         $scope.priceCalc = function() {
           if($scope.marja == null) {
             $scope.price = parseInt($scope.gos_poshlina);
@@ -151,7 +184,7 @@ function ($scope, $http) {
   $scope.docProchieClick = function () {
     $scope.notac = true;
     $scope.backToOne = true;
-
+    $scope.lastDoc = false;
     $http.get('/doc_prochie/findAll').success(function(data)
     {
       $scope.docList2 = data;

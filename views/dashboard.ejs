@@ -132,7 +132,7 @@
         <div class="">
           <ul class="nav nav-tabs">
             <li class="active">
-              <a href="#1" data-toggle="tab">Ктооооо</a>
+              <a href="#1" data-toggle="tab">Кто</a>
             </li>
             <li><a href="#2" data-toggle="tab">Автотранспорт</a>
             </li>
@@ -373,18 +373,18 @@
 </form>
 
 </div>
-<button class="btn btn-primary btn-lg btn-block" type="submit" ng-disabled="signup.$invalid" ng-model="lastDoc" ng-click="lastDocClick()">
-  <span ng-show="!signupForm.loading">Далее</span>
-  <span class="overlord-loading-spinner fa fa-spinner" ng-show="signupForm.loading" ></span>
-  <span ng-show="signupForm.loading">Подготовка к оформлению...</span>
-</button>
+<div class="row">
+  <div class="col-md-12">
+    <button type="button" class="btn btn-primary" ng-model="lastDoc" ng-click="lastDocClick()">Далее</button>
+  </div>
+</div>
 
 <input type="hidden" name="_csrf" value="<%= _csrf %>" />
 </div>
 </form>
 <form method="post" ng-show="lastDoc" ng-model="notac">
     <h3>Оформление договора</h3>
-     <textarea id="mytextarea">Договор купля продажа №1</textarea>
+     <textarea id="mytextarea" ui-tinymce="tinymceOptions" ng-model="docTitle">Договор {{ docTitle }}</textarea>
      <br>
      <button class="btn btn-primary" type="submit" ng-disabled="signup.$invalid" ng-model="lastDoc" ng-click="lastDocClick()">
        <span ng-show="!signupForm.loading">Оформить</span>
@@ -396,8 +396,11 @@
 <script src="/js/dependencies/sails.io.js"></script>
 <script src="/js/dependencies/angular.1.3.js"></script>
 <script src="/js/dependencies/angular-toastr.js"></script>
+<script src="/js/dependencies/angular-ui-tinymce/dist/tinymce.min.js"></script>
+<script src="/js/dependencies/angular-ui-tinymce/src/tinymce.js"></script>
 <script src="/js/dependencies/compareTo.module.js"></script>
 <script src="/js/dependencies/jquery.js"></script>
+<script src="/js/dependencies/tinymce.js"></script>
 <script src="/js/public/signup/SignupModule.js"></script>
 <script src="/js/private/dashboard/DashboardModule.js"></script>
 <script src="/js/private/post/PostModule.js"></script>

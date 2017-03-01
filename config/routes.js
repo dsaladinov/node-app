@@ -43,12 +43,9 @@ module.exports.routes = {
 
   // User enrollment + authentication
   'POST /signup': 'UserController.signup',
-  'POST /findDoc': 'OformdocController.findDoc',
   'PUT /login': 'UserController.login',
   'GET /logout': 'UserController.logout',
-  'POST /post/create': 'PostController.create',
   'GET /posts': 'PostController.index',
-  'GET /findAll': 'Doc_otchujdenya.findAll',
   'POST /nota_act/create': 'Nota_act.addNota'
 
 
