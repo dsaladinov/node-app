@@ -363,17 +363,19 @@
   <option value="">Выберите</option>
 </select>
 <br>
+<select data-ng-model="selectedUsl" class="form-control" data-ng-options="detail.UslugiAS.gos_poshlina for detail in uslugiList track by detail.id">
+</select>
+<br>
 <label>Маржа:</label>
 <input type="text" data-ng-model="marja" class="form-control" data-ng-change="priceCalc(marja, selectedUsl)">
 <br>
-<label for="">Цена: {{ price }}</label>
+<label>Цена: {{ price }}</label>
 <form action="/nota_act/upload" enctype="multipart/form-data" method="post">
 <input type="file" name="avatar" multiple="multiple"><br>
 <input type="submit" value="Обзор">
 </form>
 
 </div>
-
 <button class="btn btn-primary btn-lg btn-block" type="submit" ng-disabled="signup.$invalid" ng-model="lastDoc" ng-click="lastDocClick()">
   <span ng-show="!signupForm.loading">Далее</span>
   <span class="overlord-loading-spinner fa fa-spinner" ng-show="signupForm.loading" ></span>
