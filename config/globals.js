@@ -8,11 +8,11 @@
  * For more information on configuration, check out:
  * http://sailsjs.org/#!/documentation/reference/sails.config/sails.config.globals.html
  */
-var local = require('./local.js');
+// var local = require('./local.js');
 module.exports.globals = {
 
-  mode: local.environment,
-  version: local.version
+  // mode: local.environment,
+  // version: local.version
 
   /****************************************************************************
    *                                                                           *
