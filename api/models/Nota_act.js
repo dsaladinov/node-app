@@ -16,21 +16,112 @@ module.exports = {
       // required: true,
       allowNull: false
     },
-    sobsvennik: {
+    // ----- for fiz_clients-->
+    fiz_surname:{
       type: Sequelize.TEXT,
-      maxLength: 1024,
-      required: false
+      field: "fiz_surname"
     },
-    fiz_clients: {
+    fiz_name:{
+      type: Sequelize.TEXT,
+      field: "fiz_name"
+    },
+    fiz_otchestvo: {
+      type: Sequelize.TEXT,
+      field: "fiz_otchestvo"
+    },
+    fiz_passport_serial: {
+      type:Sequelize.TEXT,
+      field: "fiz_passport_serial"
+    },
+    fiz_passport_num: {
       type:Sequelize.INTEGER,
-      required: true,
-      model: 'fiz_clients'
+      field: "fiz_passport_num"
     },
-    ur_clients: {
+    fiz_organ_vydachi_passport: {
+      type: Sequelize.TEXT,
+      field: "fiz_organ_vydachi_passport"
+    },
+    fiz_inn: {
       type:Sequelize.INTEGER,
-      required: true,
-      model: 'ur_clients'
+      field: "fiz_inn"
     },
+    fiz_date_vydachi_passport: {
+      type: Sequelize.DATE,
+      field: "fiz_data_vydachi_passport"
+    },
+    fiz_srok_deistviya_passport: {
+      type:Sequelize.DATE,
+      field: "fiz_srok_deistviya_passport"
+    },
+    fiz_nike: {
+      type:Sequelize.TEXT,
+      field: "fiz_nike"
+    },
+    fiz_address_propiski: {
+      type: Sequelize.TEXT,
+      field: "address_propiski"
+    },
+    fiz_fact_propiski: {
+      type:Sequelize.TEXT,
+      field: "fiz_fact_propiski"
+    },
+    //----end fiz_clients---------<
+
+    // for ur_clients
+    ur_name_company :{
+     type:Sequelize.STRING,
+     field: "ur_name_company"
+   },
+    ur_inn : {
+     type:Sequelize.INTEGER,
+     field: "ur_inn"
+   },
+    ur_registration_num : {
+     type:Sequelize.INTEGER,
+     field: "ur_registration_num"
+   },
+    ur_address : {
+     type: Sequelize.TEXT,
+     field: "ur_address"
+   },
+    ur_cod_okpo : {
+     type:Sequelize.TEXT,
+     field: "ur_cod_okpo"
+   },
+    ur_position : {
+     type:Sequelize.TEXT,
+     field: "ur_position"
+   },
+    ur_surname : {
+     type: Sequelize.TEXT,
+     field: "ur_surname"
+   },
+    ur_name : {
+     type: Sequelize.TEXT,
+     field: "ur_name"
+   },
+    ur_otchestvo : {
+     type:Sequelize.TEXT,
+     field: "ur_otchestvo"
+   },
+    ur_phone : {
+     type:Sequelize.TEXT,
+     field: "ur_phone"
+   },
+    ur_bank_name : {
+     type:Sequelize.TEXT,
+     field: "ur_bank_name"
+   },
+    ur_bik : {
+     type:Sequelize.TEXT,
+     field: "ur_bik"
+   },
+    ur_num_chet_poluchatelya : {
+     type: Sequelize.TEXT,
+     field: "ur_num_chet_poluchatelya"
+   },
+   // end ur_clients
+
     doc_name_id: {
       type: Sequelize.INTEGER,
       unique:true,

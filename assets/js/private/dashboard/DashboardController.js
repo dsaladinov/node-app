@@ -18,6 +18,8 @@ function ($scope, $http) {
   // });
 
 
+
+
   $scope.tinymceOptions = {
     selector: '#mytextarea',
     theme: 'modern',
@@ -27,8 +29,9 @@ function ($scope, $http) {
      'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
      'save table contextmenu directionality emoticons template paste textcolor code'
    ],
-   content_css: 'css/content.css',
-   toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons| code'
+   toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons| code',
+
+
     //
     // plugins: 'link image code',
     // toolbar: 'undo redo | bold italic | alignleft aligncenter alignright | code'
@@ -158,6 +161,25 @@ function ($scope, $http) {
   $scope.docZayavleniyaClick = function () {
     $scope.notac = true;
     $scope.backToOne = true;
+    console.log($scope.clients);
+
+    $scope.addNota = function() {
+                  if (!$scope.fiz_name.length) {
+                      return;
+                  }
+                  if ($scope.clients == 1) {
+                    console.log($scope.clients);
+                    $scope.fiz_nota = function() {
+                      $http.get('/nota_act/create?fiz_name=' + $scope.fiz_name).success(function(data){
+
+                              $scope.nota_act.push({
+                                  fiz_name: $scope.fiz_name,
+                              });
+                              $scope.fiz_name = '';
+                          })
+                    }
+                  };
+              };
 
     $http.get('/zayavleniya/findAll').success(function(data)
     {
@@ -166,6 +188,9 @@ function ($scope, $http) {
       $scope.docChange = function (value) {
       $scope.sprList = value.NotactAS;
       $scope.docTitle = $scope.selectedDoc.title;
+      console.log($scope.clients);
+
+
 
       $scope.gos_poshlina = $scope.sprList[0].UslugiAS.gos_poshlina; // TODO нужно будет сделать динамически.
         $scope.priceCalc = function() {

@@ -30,9 +30,10 @@ var jsFilesToInject = [
 
     // Dependencies like jQuery, or Angular are brought in here
     'js/dependencies/angular.1.3.js',
-    'js/dependencies/**/*.js',
     'js/dependencies/tinymce.js',
     'js/dependencies/angular-ui-tinymce/src/tinymce.js',
+    'js/dependencies/**/*.js',
+
     // All of the rest of your client-side js files
     // will be injected here in no particular order.
 

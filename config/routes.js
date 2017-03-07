@@ -46,7 +46,7 @@ module.exports.routes = {
   'PUT /login': 'UserController.login',
   'GET /logout': 'UserController.logout',
   'GET /posts': 'PostController.index',
-  'POST /nota_act/create': 'Nota_act.addNota'
+  'POST /nota_act/uploadFile': 'Nota_act.uploadFile'
 
 
 

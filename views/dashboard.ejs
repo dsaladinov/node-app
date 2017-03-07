@@ -153,140 +153,140 @@
                           <p>таб 1</p>
                           <label>Я:</label>
                           <div class="form-group">
-                            <select class="form-control selectpicker form-group clients" ng-model="clients" title="Выберите...">
+                            <select class="form-control selectpicker form-group" ng-model="Kto_clients" title="Выберите...">
                               <option value="1">Физическое лицо</option>
                               <option value="2">Юридическое лицо</option>
                             </select>
                           </div>
                           <!-- Поля табов  -->
                           <!-- Физические клиенты -->
-                          <div class="fiz_clients" ng-show="clients == '1'">
-                              <label ng-show="clients == '1'">Имя:</label>
+                          <div class="fiz_clients" ng-show="Kto_clients == '1'">
+                              <label ng-show="Kto_clients == '1'">Имя:</label>
                               <div class="row">
                               <div class="control-group form-group col-md-12"
                                 ng-class="{'has-error':signup.name.$invalid &&
                                 signup.name.$dirty}">
-                                <input type="text" id="name" ng-show="clients == '1'" class="form-control" placeholder="Например: Андрей " name="name" ng-model="signupForm.name" ng-maxlength="50" required>
+                                <input type="text" id="name" ng-show="Kto_clients == '1'" class="form-control" placeholder="Например: Андрей " name="name" ng-model="signupForm.name" ng-maxlength="50" required>
                                 <span class="help-block has-error" ng-if="signup.name.$dirty">
                                   <span ng-show="signup.name.$error.required">Фамилия обязательно для заполнения.</span>
                                   <span ng-show="signup.name.$error.maxlength">Фамилия не может быть более 50 символов.</span>
                                 </span>
                               </div>
                             </div>
-                              <label ng-show="clients == '1'">Фамилия:</label>
+                              <label ng-show="Kto_clients == '1'">Фамилия:</label>
                               <div class="row">
                                 <div class="control-group form-group col-md-12"
                                   ng-class="{'has-error':signup.surname.$invalid &&
                                   signup.name.$dirty}">
-                                  <input type="text"  ng-show="clients == '1'" class="form-control" placeholder="Например: Сергеев " name="surname" ng-model="signupForm.surname" ng-maxlength="50" required>
+                                  <input type="text"  ng-show="Kto_clients == '1'" class="form-control" placeholder="Например: Сергеев " name="surname" ng-model="signupForm.surname" ng-maxlength="50" required>
                                   <span class="help-block has-error" ng-if="signup.name.$dirty">
                                     <span ng-show="signup.name.$error.required">Фамилия обязательно для заполнения.</span>
                                     <span ng-show="signup.name.$error.maxlength">Фамилия не может быть более 50 символов.</span>
                                   </span>
                                 </div>
                               </div>
-                              <label ng-show="clients == '1'">Отчество:</label>
+                              <label ng-show="Kto_clients == '1'">Отчество:</label>
                               <div class="row">
                                 <div class="control-group form-group col-md-12"
                                 ng-class="{'has-error':signup.name.$invalid &&
                                 signup.name.$dirty}">
-                                <input type="text"  ng-show="clients == '1'" class="form-control" placeholder="Например: Сергеев " name="otchestvo" ng-model="signupForm.otchestvo"  required>
+                                <input type="text"  ng-show="Kto_clients == '1'" class="form-control" placeholder="Например: Сергеев " name="otchestvo" ng-model="signupForm.otchestvo"  required>
                                 <span class="help-block has-error" ng-if="signup.name.$dirty">
                                   <span ng-show="signup.name.$error.required">Отчество обязательно для заполнения.</span>
                                   <span ng-show="signup.name.$error.maxlength">Отчество не может быть более 50 символов.</span>
                                 </span>
                               </div>
                             </div>
-                              <label ng-show="clients == '1'" >Проживающий:</label>
+                              <label ng-show="Kto_clients == '1'" >Проживающий:</label>
                               <div class="row">
                                 <div class="control-group form-group col-md-12"
                                   ng-class="{'has-error':signup.name.$invalid &&
                                   signup.name.$dirty}">
-                                  <input type="text"  ng-show="clients == '1'" class="form-control" placeholder="Например: г.Бишкек, ул.Московская 21.кв.23" name="address" ng-model="signupForm.address" ng-maxlength="50" required>
+                                  <input type="text"  ng-show="Kto_clients == '1'" class="form-control" placeholder="Например: г.Бишкек, ул.Московская 21.кв.23" name="address" ng-model="signupForm.address" ng-maxlength="50" required>
                                   <span class="help-block has-error" ng-if="signup.name.$dirty">
                                     <span ng-show="signup.name.$error.required">Проживающий обязательно для заполнения.</span>
                                     <span ng-show="signup.name.$error.maxlength">Проживающий не может быть более 50 символов.</span>
                                   </span>
                                 </div>
                               </div>
-                              <label ng-show="clients == '1'" >Серия паспорта:</label>
+                              <label ng-show="Kto_clients == '1'" >Серия паспорта:</label>
                               <div class="row">
                                   <div class="control-group form-group col-md-12"
                                       ng-class="{'has-error':signup.name.$invalid &&
                                       signup.name.$dirty}">
-                                      <input type="text"  ng-show="clients == '1'" class="form-control" placeholder="Например: AN" name="passport_serial" ng-model="signupForm.passport_serial" ng-maxlength="50" required>
+                                      <input type="text"  ng-show="Kto_clients == '1'" class="form-control" placeholder="Например: AN" name="passport_serial" ng-model="signupForm.passport_serial" ng-maxlength="50" required>
                                       <span class="help-block has-error" ng-if="signup.name.$dirty">
                                         <span ng-show="signup.name.$error.required">Серия пасспорта обязательно для заполнения.</span>
                                         <span ng-show="signup.name.$error.maxlength">Серия пасспорта не может быть более 50 символов.</span>
                                       </span>
                                   </div>
                               </div>
-                              <label ng-show="clients == '1'" >Номер паспорта:</label>
+                              <label ng-show="Kto_clients == '1'" >Номер паспорта:</label>
                               <div class="row">
                                   <div class="control-group form-group col-md-12"
                                       ng-class="{'has-error':signup.name.$invalid &&
                                       signup.name.$dirty}">
-                                      <input type="text"  ng-show="clients == '1'" class="form-control" placeholder="Например: 2440442" name="passport_num" ng-model="signupForm.passport_num" ng-maxlength="50" required>
+                                      <input type="text"  ng-show="Kto_clients == '1'" class="form-control" placeholder="Например: 2440442" name="passport_num" ng-model="signupForm.passport_num" ng-maxlength="50" required>
                                       <span class="help-block has-error" ng-if="signup.name.$dirty">
                                         <span ng-show="signup.name.$error.required">Номер пасспорта обязательно для заполнения.</span>
                                         <span ng-show="signup.name.$error.maxlength">Номер пасспорта не может быть более 50 символов.</span>
                                       </span>
                                   </div>
                               </div>
-                              <label ng-show="clients == '1'" >Орган выдачи паспорта:</label>
+                              <label ng-show="Kto_clients == '1'" >Орган выдачи паспорта:</label>
                               <div class="row">
                                   <div class="control-group form-group col-md-12"
                                       ng-class="{'has-error':signup.name.$invalid &&
                                       signup.name.$dirty}">
-                                      <input type="text"  ng-show="clients == '1'" class="form-control" placeholder="Например: МКК 50-38" name="organ_vydachi_passport" ng-model="signupForm.organ_vydachi_passport" ng-maxlength="50" required>
+                                      <input type="text"  ng-show="Kto_clients == '1'" class="form-control" placeholder="Например: МКК 50-38" name="organ_vydachi_passport" ng-model="signupForm.organ_vydachi_passport" ng-maxlength="50" required>
                                       <span class="help-block has-error" ng-if="signup.name.$dirty">
                                         <span ng-show="signup.name.$error.required">Орган выдачи пасспорта обязательно для заполнения.</span>
                                         <span ng-show="signup.name.$error.maxlength">Орган выдачи пасспорта не может быть более 50 символов.</span>
                                       </span>
                                   </div>
                               </div>
-                              <label ng-show="clients == '1'" >ИНН :</label>
+                              <label ng-show="Kto_clients == '1'" >ИНН :</label>
                               <div class="row">
                                   <div class="control-group form-group col-md-12"
                                       ng-class="{'has-error':signup.name.$invalid &&
                                       signup.name.$dirty}">
-                                      <input type="text"  ng-show="clients == '1'" class="form-control" placeholder="Например: 12423795792175" name="fiz_inn" ng-model="signupForm.fiz_inn" ng-maxlength="50" required>
+                                      <input type="text"  ng-show="Kto_clients == '1'" class="form-control" placeholder="Например: 12423795792175" name="fiz_inn" ng-model="signupForm.fiz_inn" ng-maxlength="50" required>
                                       <span class="help-block has-error" ng-if="signup.name.$dirty">
                                         <span ng-show="signup.name.$error.required">ИНН обязательно для заполнения.</span>
                                         <span ng-show="signup.name.$error.maxlength">ИНН не может быть более 50 символов.</span>
                                       </span>
                                   </div>
                               </div>
-                              <label ng-show="clients == '1'" >Дата выдачи паспорта :</label>
+                              <label ng-show="Kto_clients == '1'" >Дата выдачи паспорта :</label>
                               <div class="row">
                                   <div class="control-group form-group col-md-12"
                                       ng-class="{'has-error':signup.name.$invalid &&
                                       signup.name.$dirty}">
-                                      <input type="date"  ng-show="clients == '1'" class="form-control" placeholder="Например: 25.01.2011" name="data_vydachi_passport" ng-model="signupForm.data_vydachi_passport" ng-maxlength="50" required>
+                                      <input type="date"  ng-show="Kto_clients == '1'" class="form-control" placeholder="Например: 25.01.2011" name="data_vydachi_passport" ng-model="signupForm.data_vydachi_passport" ng-maxlength="50" required>
                                       <span class="help-block has-error" ng-if="signup.name.$dirty">
                                         <span ng-show="signup.name.$error.required">Дата выдачи паспорта обязательно для заполнения.</span>
                                         <span ng-show="signup.name.$error.maxlength">Дата выдачи паспорта не может быть более 50 символов.</span>
                                       </span>
                                   </div>
                               </div>
-                              <label ng-show="clients == '1'" >Срок действия паспорта :</label>
+                              <label ng-show="Kto_clients == '1'" >Срок действия паспорта :</label>
                               <div class="row">
                                   <div class="control-group form-group col-md-12"
                                       ng-class="{'has-error':signup.name.$invalid &&
                                       signup.name.$dirty}">
-                                      <input type="date"  ng-show="clients == '1'" class="form-control" placeholder="Например: 25.01.2011" name="srok_deistviya_passport" ng-model="signupForm.srok_deistviya_passport" ng-maxlength="50" required>
+                                      <input type="date"  ng-show="Kto_clients == '1'" class="form-control" placeholder="Например: 25.01.2011" name="srok_deistviya_passport" ng-model="signupForm.srok_deistviya_passport" ng-maxlength="50" required>
                                       <span class="help-block has-error" ng-if="signup.name.$dirty">
                                         <span ng-show="signup.name.$error.required">Срок действия паспорта обязательно для заполнения.</span>
                                         <span ng-show="signup.name.$error.maxlength">Срок действия паспорта не может быть более 50 символов.</span>
                                       </span>
                                   </div>
                               </div>
-                              <label ng-show="clients == '1'" >Нике:</label>
+                              <label ng-show="Kto_clients == '1'" >Нике:</label>
                               <div class="row">
                                   <div class="control-group form-group col-md-12"
                                     ng-class="{'has-error':signup.name.$invalid &&
                                     signup.name.$dirty}">
-                                    <div class="form-group" ng-show="clients == '1'">
+                                    <div class="form-group" ng-show="Kto_clients == '1'">
                                       <select class="form-control selectpicker form-group col-md-3"  title="Выберите...">
                                         <option value="1">Женат / Замужем</option>
                                         <option value="2">Не женат / Не замужем</option>
@@ -295,12 +295,12 @@
                                     </div>
                                   </div>
                               </div>
-                              <label ng-show="clients == '1'" >Адрес прописки :</label>
+                              <label ng-show="Kto_clients == '1'" >Адрес прописки :</label>
                               <div class="row">
                                   <div class="control-group form-group col-md-12"
                                       ng-class="{'has-error':signup.name.$invalid &&
                                       signup.name.$dirty}">
-                                      <input type="text"  ng-show="clients == '1'" class="form-control" placeholder="Например: " name="fiz_inn" ng-model="signupForm.address_propiski" ng-maxlength="50" required>
+                                      <input type="text"  ng-show="Kto_clients == '1'" class="form-control" placeholder="Например: " name="fiz_inn" ng-model="signupForm.address_propiski" ng-maxlength="50" required>
                                       <span class="help-block has-error" ng-if="signup.name.$dirty">
                                         <span ng-show="signup.name.$error.required">Адрес прописки обязательно для заполнения.</span>
                                         <span ng-show="signup.name.$error.maxlength">Адрес прописки не может быть более 50 символов.</span>
@@ -310,13 +310,13 @@
                           </div>
 
                           <!-- Юридеческие клиенты -->
-                          <div class="ur_clients" ng-show="clients == '2'">
-                              <label ng-show="clients == '2'">Название компании:</label>
+                          <div class="ur_clients" ng-show="Kto_clients == '2'">
+                              <label ng-show="Kto_clients == '2'">Название компании:</label>
                               <div class="row">
                               <div class="control-group form-group col-md-12"
                                 ng-class="{'has-error':signup.surname.$invalid &&
                                 signup.name.$dirty}">
-                                <input type="text"  ng-show="clients == '2'" class="form-control" placeholder="Например: Apple " name="name_company" ng-model="signupForm.name_company" ng-maxlength="50" required>
+                                <input type="text"  ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: Apple " name="name_company" ng-model="signupForm.name_company" ng-maxlength="50" required>
                                 <span class="help-block has-error" ng-if="signup.name.$dirty">
                                   <span ng-show="signup.name.$error.required">Фамилия обязательно для заполнения.</span>
                                   <span ng-show="signup.name.$error.maxlength">Фамилия не может быть более 50 символов.</span>
@@ -324,12 +324,12 @@
                               </div>
                             </div>
                               <br>
-                              <label ng-show="clients == '2'">ЮР ИНН:</label>
+                              <label ng-show="Kto_clients == '2'">ЮР ИНН:</label>
                               <div class="row">
                               <div class="control-group form-group col-md-12"
                                 ng-class="{'has-error':signup.name.$invalid &&
                                 signup.name.$dirty}">
-                                <input type="text" ng-show="clients == '2'" class="form-control" placeholder="Например: An3241 " name="ur_inn" ng-model="signupForm.ur_inn" ng-maxlength="50" required>
+                                <input type="text" ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: An3241 " name="ur_inn" ng-model="signupForm.ur_inn" ng-maxlength="50" required>
                                 <span class="help-block has-error" ng-if="signup.name.$dirty">
                                   <span ng-show="signup.name.$error.required">Юр ИНН обязательно для заполнения.</span>
                                   <span ng-show="signup.name.$error.maxlength">Юр ИНН не может быть более 50 символов.</span>
@@ -337,132 +337,132 @@
                               </div>
                             </div>
                               <br>
-                              <label ng-show="clients == '2'"> Регестрационный номер:</label>
+                              <label ng-show="Kto_clients == '2'"> Регестрационный номер:</label>
                               <div class="row">
                                 <div class="control-group form-group col-md-12"
                                 ng-class="{'has-error':signup.name.$invalid &&
                                 signup.name.$dirty}">
-                                <input type="number"  ng-show="clients == '2'" class="form-control" placeholder="Например: 1431242 " name="registration_num" ng-model="signupForm.registration_num"  required>
+                                <input type="number"  ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: 1431242 " name="registration_num" ng-model="signupForm.registration_num"  required>
                                 <span class="help-block has-error" ng-if="signup.name.$dirty">
                                   <span ng-show="signup.name.$error.required">Регестрационный номер обязательно для заполнения.</span>
                                   <span ng-show="signup.name.$error.maxlength">Регестрационный номер не может быть более 50 символов.</span>
                                 </span>
                               </div>
                             </div>
-                              <label ng-show="clients == '2'" >Юридический Адрес:</label>
+                              <label ng-show="Kto_clients == '2'" >Юридический Адрес:</label>
                               <div class="row">
                                 <div class="control-group form-group col-md-12"
                                   ng-class="{'has-error':signup.name.$invalid &&
                                   signup.name.$dirty}">
-                                  <input type="number"  ng-show="clients == '2'" class="form-control" placeholder="Например: г.Бишкек, ул.Московская 21.кв.23" name="ur_address" ng-model="signupForm.ur_address" ng-maxlength="50" required>
+                                  <input type="number"  ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: г.Бишкек, ул.Московская 21.кв.23" name="ur_address" ng-model="signupForm.ur_address" ng-maxlength="50" required>
                                   <span class="help-block has-error" ng-if="signup.name.$dirty">
                                     <span ng-show="signup.name.$error.required">Проживающий обязательно для заполнения.</span>
                                     <span ng-show="signup.name.$error.maxlength">Проживающий не может быть более 50 символов.</span>
                                   </span>
                                 </div>
                               </div>
-                              <label ng-show="clients == '2'" >cod_okpo:</label>
+                              <label ng-show="Kto_clients == '2'" >cod_okpo:</label>
                               <div class="row">
                                   <div class="control-group form-group col-md-12"
                                       ng-class="{'has-error':signup.name.$invalid &&
                                       signup.name.$dirty}">
-                                      <input type="text"  ng-show="clients == '2'" class="form-control" placeholder="Например: AN" name="cod_okpo" ng-model="signupForm.cod_okpo" ng-maxlength="50" required>
+                                      <input type="text"  ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: AN" name="cod_okpo" ng-model="signupForm.cod_okpo" ng-maxlength="50" required>
                                       <span class="help-block has-error" ng-if="signup.name.$dirty">
                                         <span ng-show="signup.name.$error.required">cod_okpo обязательно для заполнения.</span>
                                         <span ng-show="signup.name.$error.maxlength">cod_okpo не может быть более 50 символов.</span>
                                       </span>
                                   </div>
                               </div>
-                              <label ng-show="clients == '2'" >position:</label>
+                              <label ng-show="Kto_clients == '2'" >position:</label>
                               <div class="row">
                                   <div class="control-group form-group col-md-12"
                                       ng-class="{'has-error':signup.name.$invalid &&
                                       signup.name.$dirty}">
-                                      <input type="text"  ng-show="clients == '2'" class="form-control" placeholder="Например: 2440442" name="passport_num" ng-model="signupForm.passport_num" ng-maxlength="50" required>
+                                      <input type="text"  ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: 2440442" name="passport_num" ng-model="signupForm.passport_num" ng-maxlength="50" required>
                                       <span class="help-block has-error" ng-if="signup.name.$dirty">
                                         <span ng-show="signup.name.$error.required">Номер пасспорта обязательно для заполнения.</span>
                                         <span ng-show="signup.name.$error.maxlength">Номер пасспорта не может быть более 50 символов.</span>
                                       </span>
                                   </div>
                               </div>
-                              <label ng-show="clients == '2'">Фамилия:</label>
+                              <label ng-show="Kto_clients == '2'">Фамилия:</label>
                               <div class="row">
                                 <div class="control-group form-group col-md-12"
                                   ng-class="{'has-error':signup.surname.$invalid &&
                                   signup.name.$dirty}">
-                                  <input type="text"  ng-show="clients == '2'" class="form-control" placeholder="Например: Сергеев " name="surname" ng-model="signupForm.surname" ng-maxlength="50" required>
+                                  <input type="text"  ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: Сергеев " name="surname" ng-model="signupForm.surname" ng-maxlength="50" required>
                                   <span class="help-block has-error" ng-if="signup.name.$dirty">
                                     <span ng-show="signup.name.$error.required">Фамилия обязательно для заполнения.</span>
                                     <span ng-show="signup.name.$error.maxlength">Фамилия не может быть более 50 символов.</span>
                                   </span>
                                 </div>
                               </div>
-                              <label ng-show="clients == '2'">Имя:</label>
+                              <label ng-show="Kto_clients == '2'">Имя:</label>
                               <div class="row">
                                 <div class="control-group form-group col-md-12"
                                   ng-class="{'has-error':signup.name.$invalid &&
                                   signup.name.$dirty}">
-                                  <input type="text" id="name" ng-show="clients == '2'" class="form-control" placeholder="Например: Андрей " name="name" ng-model="signupForm.name" ng-maxlength="50" required>
+                                  <input type="text" id="name" ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: Андрей " name="name" ng-model="signupForm.name" ng-maxlength="50" required>
                                   <span class="help-block has-error" ng-if="signup.name.$dirty">
                                     <span ng-show="signup.name.$error.required">Фамилия обязательно для заполнения.</span>
                                     <span ng-show="signup.name.$error.maxlength">Фамилия не может быть более 50 символов.</span>
                                   </span>
                                 </div>
                               </div>
-                              <label ng-show="clients == '2'">Отчество:</label>
+                              <label ng-show="Kto_clients == '2'">Отчество:</label>
                               <div class="row">
                                 <div class="control-group form-group col-md-12"
                                     ng-class="{'has-error':signup.name.$invalid &&
                                     signup.name.$dirty}">
-                                    <input type="text"  ng-show="clients == '2'" class="form-control" placeholder="Например: Сергеев " name="otchestvo" ng-model="signupForm.otchestvo"  required>
+                                    <input type="text"  ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: Сергеев " name="otchestvo" ng-model="signupForm.otchestvo"  required>
                                     <span class="help-block has-error" ng-if="signup.name.$dirty">
                                       <span ng-show="signup.name.$error.required">Отчество обязательно для заполнения.</span>
                                       <span ng-show="signup.name.$error.maxlength">Отчество не может быть более 50 символов.</span>
                                     </span>
                                 </div>
                               </div>
-                              <label ng-show="clients == '2'" >Телефон :</label>
+                              <label ng-show="Kto_clients == '2'" >Телефон :</label>
                               <div class="row">
                                   <div class="control-group form-group col-md-12"
                                       ng-class="{'has-error':signup.name.$invalid &&
                                       signup.name.$dirty}">
-                                      <input type="text"  ng-show="clients == '2'" class="form-control" placeholder="Например: 12423795792175" name="phone" ng-model="signupForm.phone" ng-maxlength="50" required>
+                                      <input type="text"  ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: 12423795792175" name="phone" ng-model="signupForm.phone" ng-maxlength="50" required>
                                       <span class="help-block has-error" ng-if="signup.name.$dirty">
                                         <span ng-show="signup.name.$error.required">Телефон обязательно для заполнения.</span>
                                         <span ng-show="signup.name.$error.maxlength">Телефон не может быть более 50 символов.</span>
                                       </span>
                                   </div>
                               </div>
-                              <label ng-show="clients == '2'" >Название банка :</label>
+                              <label ng-show="Kto_clients == '2'" >Название банка :</label>
                               <div class="row">
                                   <div class="control-group form-group col-md-12"
                                       ng-class="{'has-error':signup.name.$invalid &&
                                       signup.name.$dirty}">
-                                      <input type="text"  ng-show="clients == '2'" class="form-control" placeholder="Например: Deitche bank" name="bank_name" ng-model="signupForm.bank_name" ng-maxlength="50" required>
+                                      <input type="text"  ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: Deitche bank" name="bank_name" ng-model="signupForm.bank_name" ng-maxlength="50" required>
                                       <span class="help-block has-error" ng-if="signup.name.$dirty">
                                         <span ng-show="signup.name.$error.required">Название банка обязательно для заполнения.</span>
                                         <span ng-show="signup.name.$error.maxlength">Название банка не может быть более 50 символов.</span>
                                       </span>
                                   </div>
                               </div>
-                              <label ng-show="clients == '2'" >bik :</label>
+                              <label ng-show="Kto_clients == '2'" >bik :</label>
                               <div class="row">
                                   <div class="control-group form-group col-md-12"
                                       ng-class="{'has-error':signup.name.$invalid &&
                                       signup.name.$dirty}">
-                                      <input type="text"  ng-show="clients == '2'" class="form-control" placeholder="Например: " name="bik" ng-model="signupForm.bik" ng-maxlength="50" required>
+                                      <input type="text"  ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: " name="bik" ng-model="signupForm.bik" ng-maxlength="50" required>
                                       <span class="help-block has-error" ng-if="signup.name.$dirty">
                                         <span ng-show="signup.name.$error.required">bik обязательно для заполнения.</span>
                                         <span ng-show="signup.name.$error.maxlength">bik не может быть более 50 символов.</span>
                                       </span>
                                   </div>
                               </div>
-                              <label ng-show="clients == '2'" >Лицевой счет получателя :</label>
+                              <label ng-show="Kto_clients == '2'" >Лицевой счет получателя :</label>
                               <div class="row">
                                   <div class="control-group form-group col-md-12"
                                       ng-class="{'has-error':signup.name.$invalid &&
                                       signup.name.$dirty}">
-                                      <input type="text"  ng-show="clients == '2'" class="form-control" placeholder="Например: " name="num_chet_poluchatelya" ng-model="signupForm.num_chet_poluchatelya" ng-maxlength="50" required>
+                                      <input type="text"  ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: " name="num_chet_poluchatelya" ng-model="signupForm.num_chet_poluchatelya" ng-maxlength="50" required>
                                       <span class="help-block has-error" ng-if="signup.name.$dirty">
                                         <span ng-show="signup.name.$error.required">Лицевой счет получателя обязательно для заполнения.</span>
                                         <span ng-show="signup.name.$error.maxlength">Лицевой счет получателя не может быть более 50 символов.</span>
@@ -475,30 +475,30 @@
                       <!-- Таб 2 -->
                       <div class="tab-pane" id="tab-2">
                         <p>таб 2</p>
-                          <div class="fiz_clients">
-                              <label ng-show="clients == '1'">Марка и модель автомобиля</label>
+                          <div class="auto-transport">
+                              <label>Марка и модель автомобиля</label>
                               <div class="control-group form-group col-md-12" ng-class="">
-                                  <input type="text"  ng-show="clients == '1'"  class="form-control " placeholder="Например: BMW X5" name="car-model" ng-model="signupForm.name" ng-maxlength="50" required>
+                                  <input type="text" class="form-control " placeholder="Например: BMW X5" name="car-model" ng-model="signupForm.name" ng-maxlength="50" required>
                                   <span class="help-block has-error" ng-if="signup.name.$dirty">
                                     <span ng-show="signup.name.$error.required">Марка и модель обязательно для заполнения.</span>
                                     <span ng-show="signup.name.$error.maxlength">Марка и модель не может быть более 50 символов.</span>
                                   </span>
                               </div>
                               <br>
-                              <label ng-show="clients == '1'">Объем двигателя:</label>
+                              <label>Объем двигателя:</label>
                               <div class="row">
                                   <div class="control-group form-group col-md-12" ng-class="">
-                                      <input type="text"  ng-show="clients == '1'" class="form-control" placeholder="Например: 2.4" name="motor" ng-model="signupForm.name" ng-maxlength="50" required>
+                                      <input type="text" class="form-control" placeholder="Например: 2.4" name="motor" ng-model="signupForm.name" ng-maxlength="50" required>
                                       <span class="help-block has-error" ng-if="signup.name.$dirty">
                                         <span ng-show="signup.name.$error.required">Объем двигателя обязательно для заполнения.</span>
                                         <span ng-show="signup.name.$error.maxlength">Объем двигателя не может быть более 50 символов.</span>
                                       </span>
                                   </div>
                               </div>
-                              <label ng-show="clients == '1'" >Год выпуска:</label>
+                              <label>Год выпуска:</label>
                               <div class="row">
                                   <div class="control-group form-group col-md-12" ng-class="">
-                                      <input type="text"  ng-show="clients == '1'" class="form-control" placeholder="Например: 2003 г." name="name" ng-model="signupForm.name" ng-maxlength="50" required>
+                                      <input type="text" class="form-control" placeholder="Например: 2003 г." name="name" ng-model="signupForm.name" ng-maxlength="50" required>
                                       <span class="help-block has-error" ng-if="signup.name.$dirty">
                                         <span ng-show="signup.name.$error.required">Проживающий обязательно для заполнения.</span>
                                         <span ng-show="signup.name.$error.maxlength">Проживающий не может быть более 50 символов.</span>
@@ -511,139 +511,139 @@
                       <!-- Таб 3 -->
                       <div class="tab-pane" id="tab-3">
                             <div class="form-group">
-                              <select class="form-control selectpicker form-group clients col-md-12" ng-model="clients" title="Выберите...">
+                              <select class="form-control selectpicker form-group clients col-md-12" ng-model="Komu_clients" title="Выберите...">
                                 <option value="1">Физическое лицо</option>
                                 <option value="2">Юридическое лицо</option>
                               </select>
                             </div>
                             <!-- Таб 3 физ клиенты -->
-                            <div class="fiz_clients" ng-show="clients == '1'">
-                                <label ng-show="clients == '1'">Имя:</label>
+                            <div class="fiz_clients" ng-show="Komu_clients == '1'">
+                                <label ng-show="Komu_clients == '1'">Имя:</label>
                                 <div class="row">
                                   <div class="control-group form-group col-md-12"
                                       ng-class="{'has-error':signup.name.$invalid &&
                                       signup.name.$dirty}">
-                                      <input type="text" id="name" ng-show="clients == '1'" class="form-control" placeholder="Например: Андрей " name="name" ng-model="signupForm.name" ng-maxlength="50" required>
+                                      <input type="text" id="name" ng-show="Komu_clients == '1'" class="form-control" placeholder="Например: Андрей " name="name" ng-model="signupForm.name" ng-maxlength="50" required>
                                       <span class="help-block has-error" ng-if="signup.name.$dirty">
                                         <span ng-show="signup.name.$error.required">Фамилия обязательно для заполнения.</span>
                                         <span ng-show="signup.name.$error.maxlength">Фамилия не может быть более 50 символов.</span>
                                       </span>
                                   </div>
                                 </div>
-                                <label ng-show="clients == '1'">Фамилия:</label>
+                                <label ng-show="Komu_clients == '1'">Фамилия:</label>
                                 <div class="row">
                                   <div class="control-group form-group col-md-12"
                                     ng-class="{'has-error':signup.surname.$invalid &&
                                     signup.name.$dirty}">
-                                    <input type="text"  ng-show="clients == '1'" class="form-control" placeholder="Например: Сергеев " name="surname" ng-model="signupForm.surname" ng-maxlength="50" required>
+                                    <input type="text"  ng-show="Komu_clients == '1'" class="form-control" placeholder="Например: Сергеев " name="surname" ng-model="signupForm.surname" ng-maxlength="50" required>
                                     <span class="help-block has-error" ng-if="signup.name.$dirty">
                                       <span ng-show="signup.name.$error.required">Фамилия обязательно для заполнения.</span>
                                       <span ng-show="signup.name.$error.maxlength">Фамилия не может быть более 50 символов.</span>
                                     </span>
                                   </div>
                                 </div>
-                                <label ng-show="clients == '1'">Отчество:</label>
+                                <label ng-show="Komu_clients == '1'">Отчество:</label>
                                 <div class="row">
                                   <div class="control-group form-group col-md-12"
                                       ng-class="{'has-error':signup.name.$invalid &&
                                       signup.name.$dirty}">
-                                      <input type="text"  ng-show="clients == '1'" class="form-control" placeholder="Например: Сергеев " name="otchestvo" ng-model="signupForm.otchestvo"  required>
+                                      <input type="text"  ng-show="Kto_clients == '1'" class="form-control" placeholder="Например: Сергеев " name="otchestvo" ng-model="signupForm.otchestvo"  required>
                                       <span class="help-block has-error" ng-if="signup.name.$dirty">
                                         <span ng-show="signup.name.$error.required">Отчество обязательно для заполнения.</span>
                                         <span ng-show="signup.name.$error.maxlength">Отчество не может быть более 50 символов.</span>
                                       </span>
                                   </div>
                                 </div>
-                                <label ng-show="clients == '1'" >Проживающий:</label>
+                                <label ng-show="Komu_clients == '1'" >Проживающий:</label>
                                 <div class="row">
                                   <div class="control-group form-group col-md-12"
                                     ng-class="{'has-error':signup.name.$invalid &&
                                     signup.name.$dirty}">
-                                    <input type="text"  ng-show="clients == '1'" class="form-control" placeholder="Например: г.Бишкек, ул.Московская 21.кв.23" name="address" ng-model="signupForm.address" ng-maxlength="50" required>
+                                    <input type="text"  ng-show="Kto_clients == '1'" class="form-control" placeholder="Например: г.Бишкек, ул.Московская 21.кв.23" name="address" ng-model="signupForm.address" ng-maxlength="50" required>
                                     <span class="help-block has-error" ng-if="signup.name.$dirty">
                                       <span ng-show="signup.name.$error.required">Проживающий обязательно для заполнения.</span>
                                       <span ng-show="signup.name.$error.maxlength">Проживающий не может быть более 50 символов.</span>
                                     </span>
                                   </div>
                                 </div>
-                                <label ng-show="clients == '1'" >Серия паспорта:</label>
+                                <label ng-show="Komu_clients == '1'" >Серия паспорта:</label>
                                 <div class="row">
                                     <div class="control-group form-group col-md-12"
                                         ng-class="{'has-error':signup.name.$invalid &&
                                         signup.name.$dirty}">
-                                        <input type="text"  ng-show="clients == '1'" class="form-control" placeholder="Например: AN" name="passport_serial" ng-model="signupForm.passport_serial" ng-maxlength="50" required>
+                                        <input type="text"  ng-show="Kto_clients == '1'" class="form-control" placeholder="Например: AN" name="passport_serial" ng-model="signupForm.passport_serial" ng-maxlength="50" required>
                                         <span class="help-block has-error" ng-if="signup.name.$dirty">
                                           <span ng-show="signup.name.$error.required">Серия пасспорта обязательно для заполнения.</span>
                                           <span ng-show="signup.name.$error.maxlength">Серия пасспорта не может быть более 50 символов.</span>
                                         </span>
                                     </div>
                                 </div>
-                                <label ng-show="clients == '1'" >Номер паспорта:</label>
+                                <label ng-show="Komu_clients == '1'" >Номер паспорта:</label>
                                 <div class="row">
                                     <div class="control-group form-group col-md-12"
                                         ng-class="{'has-error':signup.name.$invalid &&
                                         signup.name.$dirty}">
-                                        <input type="text"  ng-show="clients == '1'" class="form-control" placeholder="Например: 2440442" name="passport_num" ng-model="signupForm.passport_num" ng-maxlength="50" required>
+                                        <input type="text"  ng-show="Kto_clients == '1'" class="form-control" placeholder="Например: 2440442" name="passport_num" ng-model="signupForm.passport_num" ng-maxlength="50" required>
                                         <span class="help-block has-error" ng-if="signup.name.$dirty">
                                           <span ng-show="signup.name.$error.required">Номер пасспорта обязательно для заполнения.</span>
                                           <span ng-show="signup.name.$error.maxlength">Номер пасспорта не может быть более 50 символов.</span>
                                         </span>
                                     </div>
                                 </div>
-                                <label ng-show="clients == '1'" >Орган выдачи паспорта:</label>
+                                <label ng-show="Komu_clients == '1'" >Орган выдачи паспорта:</label>
                                 <div class="row">
                                     <div class="control-group form-group col-md-12"
                                         ng-class="{'has-error':signup.name.$invalid &&
                                         signup.name.$dirty}">
-                                        <input type="text"  ng-show="clients == '1'" class="form-control" placeholder="Например: МКК 50-38" name="organ_vydachi_passport" ng-model="signupForm.organ_vydachi_passport" ng-maxlength="50" required>
+                                        <input type="text"  ng-show="Kto_clients == '1'" class="form-control" placeholder="Например: МКК 50-38" name="organ_vydachi_passport" ng-model="signupForm.organ_vydachi_passport" ng-maxlength="50" required>
                                         <span class="help-block has-error" ng-if="signup.name.$dirty">
                                           <span ng-show="signup.name.$error.required">Орган выдачи пасспорта обязательно для заполнения.</span>
                                           <span ng-show="signup.name.$error.maxlength">Орган выдачи пасспорта не может быть более 50 символов.</span>
                                         </span>
                                     </div>
                                 </div>
-                                <label ng-show="clients == '1'" >ИНН :</label>
+                                <label ng-show="Komu_clients == '1'" >ИНН :</label>
                                 <div class="row">
                                     <div class="control-group form-group col-md-12"
                                         ng-class="{'has-error':signup.name.$invalid &&
                                         signup.name.$dirty}">
-                                        <input type="text"  ng-show="clients == '1'" class="form-control" placeholder="Например: 12423795792175" name="fiz_inn" ng-model="signupForm.fiz_inn" ng-maxlength="50" required>
+                                        <input type="text"  ng-show="Kto_clients == '1'" class="form-control" placeholder="Например: 12423795792175" name="fiz_inn" ng-model="signupForm.fiz_inn" ng-maxlength="50" required>
                                         <span class="help-block has-error" ng-if="signup.name.$dirty">
                                           <span ng-show="signup.name.$error.required">ИНН обязательно для заполнения.</span>
                                           <span ng-show="signup.name.$error.maxlength">ИНН не может быть более 50 символов.</span>
                                         </span>
                                     </div>
                                 </div>
-                                <label ng-show="clients == '1'" >Дата выдачи паспорта :</label>
+                                <label ng-show="Komu_clients == '1'" >Дата выдачи паспорта :</label>
                                 <div class="row">
                                     <div class="control-group form-group col-md-12"
                                         ng-class="{'has-error':signup.name.$invalid &&
                                         signup.name.$dirty}">
-                                        <input type="date"  ng-show="clients == '1'" class="form-control" placeholder="Например: 25.01.2011" name="data_vydachi_passport" ng-model="signupForm.data_vydachi_passport" ng-maxlength="50" required>
+                                        <input type="date"  ng-show="Kto_clients == '1'" class="form-control" placeholder="Например: 25.01.2011" name="data_vydachi_passport" ng-model="signupForm.data_vydachi_passport" ng-maxlength="50" required>
                                         <span class="help-block has-error" ng-if="signup.name.$dirty">
                                           <span ng-show="signup.name.$error.required">Дата выдачи паспорта обязательно для заполнения.</span>
                                           <span ng-show="signup.name.$error.maxlength">Дата выдачи паспорта не может быть более 50 символов.</span>
                                         </span>
                                     </div>
                                 </div>
-                                <label ng-show="clients == '1'" >Срок действия паспорта :</label>
+                                <label ng-show="Komu_clients == '1'" >Срок действия паспорта :</label>
                                 <div class="row">
                                     <div class="control-group form-group col-md-12"
                                         ng-class="{'has-error':signup.name.$invalid &&
                                         signup.name.$dirty}">
-                                        <input type="date"  ng-show="clients == '1'" class="form-control" placeholder="Например: 25.01.2011" name="srok_deistviya_passport" ng-model="signupForm.srok_deistviya_passport" ng-maxlength="50" required>
+                                        <input type="date"  ng-show="Kto_clients == '1'" class="form-control" placeholder="Например: 25.01.2011" name="srok_deistviya_passport" ng-model="signupForm.srok_deistviya_passport" ng-maxlength="50" required>
                                         <span class="help-block has-error" ng-if="signup.name.$dirty">
                                           <span ng-show="signup.name.$error.required">Срок действия паспорта обязательно для заполнения.</span>
                                           <span ng-show="signup.name.$error.maxlength">Срок действия паспорта не может быть более 50 символов.</span>
                                         </span>
                                     </div>
                                 </div>
-                                <label ng-show="clients == '1'" >Нике:</label>
+                                <label ng-show="Komu_clients == '1'" >Нике:</label>
                                 <div class="row">
                                     <div class="control-group form-group col-md-12"
                                       ng-class="{'has-error':signup.name.$invalid &&
                                       signup.name.$dirty}">
-                                      <div class="form-group" ng-show="clients == '1'">
+                                      <div class="form-group" ng-show="Kto_clients == '1'">
                                         <select class="form-control selectpicker form-group col-md-3"  title="Выберите...">
                                           <option value="1">Женат / Замужем</option>
                                           <option value="2">Не женат / Не замужем</option>
@@ -652,12 +652,12 @@
                                       </div>
                                     </div>
                                 </div>
-                                <label ng-show="clients == '1'" >Адрес прописки :</label>
+                                <label ng-show="Komu_clients == '1'" >Адрес прописки :</label>
                                 <div class="row">
                                     <div class="control-group form-group col-md-12"
                                         ng-class="{'has-error':signup.name.$invalid &&
                                         signup.name.$dirty}">
-                                        <input type="text"  ng-show="clients == '1'" class="form-control" placeholder="Например: " name="fiz_inn" ng-model="signupForm.address_propiski" ng-maxlength="50" required>
+                                        <input type="text"  ng-show="Kto_clients == '1'" class="form-control" placeholder="Например: " name="fiz_inn" ng-model="signupForm.address_propiski" ng-maxlength="50" required>
                                         <span class="help-block has-error" ng-if="signup.name.$dirty">
                                           <span ng-show="signup.name.$error.required">Адрес прописки обязательно для заполнения.</span>
                                           <span ng-show="signup.name.$error.maxlength">Адрес прописки не может быть более 50 символов.</span>
@@ -666,14 +666,14 @@
                                 </div>
                             </div>
 
-                            <div class="ur_clients" ng-show="clients == '2'">
+                            <div class="ur_clients" ng-show="Kto_clients == '2'">
                               <!-- <div class=""> -->
-                                <label ng-show="clients == '2'">Название компании:</label>
+                                <label ng-show="Komu_clients == '2'">Название компании:</label>
                                 <div class="row">
                                   <div class="control-group form-group col-md-12"
                                       ng-class="{'has-error':signup.surname.$invalid &&
                                       signup.name.$dirty}">
-                                      <input type="text"  ng-show="clients == '2'" class="form-control" placeholder="Например: Apple " name="name_company" ng-model="signupForm.name_company" ng-maxlength="50" required>
+                                      <input type="text"  ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: Apple " name="name_company" ng-model="signupForm.name_company" ng-maxlength="50" required>
                                       <span class="help-block has-error" ng-if="signup.name.$dirty">
                                         <span ng-show="signup.name.$error.required">Фамилия обязательно для заполнения.</span>
                                         <span ng-show="signup.name.$error.maxlength">Фамилия не может быть более 50 символов.</span>
@@ -681,12 +681,12 @@
                                 </div>
                                 </div>
                                 <br>
-                                <label ng-show="clients == '2'">ЮР ИНН:</label>
+                                <label ng-show="Komu_clients == '2'">ЮР ИНН:</label>
                                 <div class="row">
                                 <div class="control-group form-group col-md-12"
                                   ng-class="{'has-error':signup.name.$invalid &&
                                   signup.name.$dirty}">
-                                  <input type="text" ng-show="clients == '2'" class="form-control" placeholder="Например: An3241 " name="ur_inn" ng-model="signupForm.ur_inn" ng-maxlength="50" required>
+                                  <input type="text" ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: An3241 " name="ur_inn" ng-model="signupForm.ur_inn" ng-maxlength="50" required>
                                   <span class="help-block has-error" ng-if="signup.name.$dirty">
                                     <span ng-show="signup.name.$error.required">Юр ИНН обязательно для заполнения.</span>
                                     <span ng-show="signup.name.$error.maxlength">Юр ИНН не может быть более 50 символов.</span>
@@ -694,132 +694,132 @@
                                 </div>
                               </div>
                                 <br>
-                                <label ng-show="clients == '2'"> Регестрационный номер:</label>
+                                <label ng-show="Komu_clients == '2'"> Регестрационный номер:</label>
                                 <div class="row">
                                   <div class="control-group form-group col-md-12"
                                   ng-class="{'has-error':signup.name.$invalid &&
                                   signup.name.$dirty}">
-                                  <input type="number"  ng-show="clients == '2'" class="form-control" placeholder="Например: 1431242 " name="registration_num" ng-model="signupForm.registration_num"  required>
+                                  <input type="number"  ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: 1431242 " name="registration_num" ng-model="signupForm.registration_num"  required>
                                   <span class="help-block has-error" ng-if="signup.name.$dirty">
                                     <span ng-show="signup.name.$error.required">Регестрационный номер обязательно для заполнения.</span>
                                     <span ng-show="signup.name.$error.maxlength">Регестрационный номер не может быть более 50 символов.</span>
                                   </span>
                                 </div>
                               </div>
-                                <label ng-show="clients == '2'" >Юридический Адрес:</label>
+                                <label ng-show="Komu_clients == '2'" >Юридический Адрес:</label>
                                 <div class="row">
                                   <div class="control-group form-group col-md-12"
                                     ng-class="{'has-error':signup.name.$invalid &&
                                     signup.name.$dirty}">
-                                    <input type="number"  ng-show="clients == '2'" class="form-control" placeholder="Например: г.Бишкек, ул.Московская 21.кв.23" name="ur_address" ng-model="signupForm.ur_address" ng-maxlength="50" required>
+                                    <input type="number"  ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: г.Бишкек, ул.Московская 21.кв.23" name="ur_address" ng-model="signupForm.ur_address" ng-maxlength="50" required>
                                     <span class="help-block has-error" ng-if="signup.name.$dirty">
                                       <span ng-show="signup.name.$error.required">Проживающий обязательно для заполнения.</span>
                                       <span ng-show="signup.name.$error.maxlength">Проживающий не может быть более 50 символов.</span>
                                     </span>
                                   </div>
                                 </div>
-                                <label ng-show="clients == '2'" >cod_okpo:</label>
+                                <label ng-show="Komu_clients == '2'" >cod_okpo:</label>
                                 <div class="row">
                                     <div class="control-group form-group col-md-12"
                                         ng-class="{'has-error':signup.name.$invalid &&
                                         signup.name.$dirty}">
-                                        <input type="text"  ng-show="clients == '2'" class="form-control" placeholder="Например: AN" name="cod_okpo" ng-model="signupForm.cod_okpo" ng-maxlength="50" required>
+                                        <input type="text"  ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: AN" name="cod_okpo" ng-model="signupForm.cod_okpo" ng-maxlength="50" required>
                                         <span class="help-block has-error" ng-if="signup.name.$dirty">
                                           <span ng-show="signup.name.$error.required">cod_okpo обязательно для заполнения.</span>
                                           <span ng-show="signup.name.$error.maxlength">cod_okpo не может быть более 50 символов.</span>
                                         </span>
                                     </div>
                                 </div>
-                                <label ng-show="clients == '2'" >position:</label>
+                                <label ng-show="Komu_clients == '2'" >position:</label>
                                 <div class="row">
                                     <div class="control-group form-group col-md-12"
                                         ng-class="{'has-error':signup.name.$invalid &&
                                         signup.name.$dirty}">
-                                        <input type="text"  ng-show="clients == '2'" class="form-control" placeholder="Например: 2440442" name="passport_num" ng-model="signupForm.passport_num" ng-maxlength="50" required>
+                                        <input type="text"  ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: 2440442" name="passport_num" ng-model="signupForm.passport_num" ng-maxlength="50" required>
                                         <span class="help-block has-error" ng-if="signup.name.$dirty">
                                           <span ng-show="signup.name.$error.required">Номер пасспорта обязательно для заполнения.</span>
                                           <span ng-show="signup.name.$error.maxlength">Номер пасспорта не может быть более 50 символов.</span>
                                         </span>
                                     </div>
                                 </div>
-                                <label ng-show="clients == '2'">Фамилия:</label>
+                                <label ng-show="Komu_clients == '2'">Фамилия:</label>
                                 <div class="row">
                                   <div class="control-group form-group col-md-12"
                                     ng-class="{'has-error':signup.surname.$invalid &&
                                     signup.name.$dirty}">
-                                    <input type="text"  ng-show="clients == '2'" class="form-control" placeholder="Например: Сергеев " name="surname" ng-model="signupForm.surname" ng-maxlength="50" required>
+                                    <input type="text"  ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: Сергеев " name="surname" ng-model="signupForm.surname" ng-maxlength="50" required>
                                     <span class="help-block has-error" ng-if="signup.name.$dirty">
                                       <span ng-show="signup.name.$error.required">Фамилия обязательно для заполнения.</span>
                                       <span ng-show="signup.name.$error.maxlength">Фамилия не может быть более 50 символов.</span>
                                     </span>
                                   </div>
                                 </div>
-                                <label ng-show="clients == '2'">Имя:</label>
+                                <label ng-show="Komu_clients == '2'">Имя:</label>
                                 <div class="row">
                                   <div class="control-group form-group col-md-12"
                                     ng-class="{'has-error':signup.name.$invalid &&
                                     signup.name.$dirty}">
-                                    <input type="text" id="name" ng-show="clients == '2'" class="form-control" placeholder="Например: Андрей " name="name" ng-model="signupForm.name" ng-maxlength="50" required>
+                                    <input type="text" id="name" ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: Андрей " name="name" ng-model="signupForm.name" ng-maxlength="50" required>
                                     <span class="help-block has-error" ng-if="signup.name.$dirty">
                                       <span ng-show="signup.name.$error.required">Фамилия обязательно для заполнения.</span>
                                       <span ng-show="signup.name.$error.maxlength">Фамилия не может быть более 50 символов.</span>
                                     </span>
                                   </div>
                                 </div>
-                                <label ng-show="clients == '2'">Отчество:</label>
+                                <label ng-show="Komu_clients == '2'">Отчество:</label>
                                 <div class="row">
                                   <div class="control-group form-group col-md-12"
                                       ng-class="{'has-error':signup.name.$invalid &&
                                       signup.name.$dirty}">
-                                      <input type="text"  ng-show="clients == '2'" class="form-control" placeholder="Например: Сергеев " name="otchestvo" ng-model="signupForm.otchestvo"  required>
+                                      <input type="text"  ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: Сергеев " name="otchestvo" ng-model="signupForm.otchestvo"  required>
                                       <span class="help-block has-error" ng-if="signup.name.$dirty">
                                         <span ng-show="signup.name.$error.required">Отчество обязательно для заполнения.</span>
                                         <span ng-show="signup.name.$error.maxlength">Отчество не может быть более 50 символов.</span>
                                       </span>
                                   </div>
                                 </div>
-                                <label ng-show="clients == '2'" >Телефон :</label>
+                                <label ng-show="Komu_clients == '2'" >Телефон :</label>
                                 <div class="row">
                                     <div class="control-group form-group col-md-12"
                                         ng-class="{'has-error':signup.name.$invalid &&
                                         signup.name.$dirty}">
-                                        <input type="text"  ng-show="clients == '2'" class="form-control" placeholder="Например: 12423795792175" name="phone" ng-model="signupForm.phone" ng-maxlength="50" required>
+                                        <input type="text"  ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: 12423795792175" name="phone" ng-model="signupForm.phone" ng-maxlength="50" required>
                                         <span class="help-block has-error" ng-if="signup.name.$dirty">
                                           <span ng-show="signup.name.$error.required">Телефон обязательно для заполнения.</span>
                                           <span ng-show="signup.name.$error.maxlength">Телефон не может быть более 50 символов.</span>
                                         </span>
                                     </div>
                                 </div>
-                                <label ng-show="clients == '2'" >Название банка :</label>
+                                <label ng-show="Komu_clients == '2'" >Название банка :</label>
                                 <div class="row">
                                     <div class="control-group form-group col-md-12"
                                         ng-class="{'has-error':signup.name.$invalid &&
                                         signup.name.$dirty}">
-                                        <input type="text"  ng-show="clients == '2'" class="form-control" placeholder="Например: Deitche bank" name="bank_name" ng-model="signupForm.bank_name" ng-maxlength="50" required>
+                                        <input type="text"  ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: Deitche bank" name="bank_name" ng-model="signupForm.bank_name" ng-maxlength="50" required>
                                         <span class="help-block has-error" ng-if="signup.name.$dirty">
                                           <span ng-show="signup.name.$error.required">Название банка обязательно для заполнения.</span>
                                           <span ng-show="signup.name.$error.maxlength">Название банка не может быть более 50 символов.</span>
                                         </span>
                                     </div>
                                 </div>
-                                <label ng-show="clients == '2'" >bik :</label>
+                                <label ng-show="Komu_clients == '2'" >bik :</label>
                                 <div class="row">
                                     <div class="control-group form-group col-md-12"
                                         ng-class="{'has-error':signup.name.$invalid &&
                                         signup.name.$dirty}">
-                                        <input type="text"  ng-show="clients == '2'" class="form-control" placeholder="Например: " name="bik" ng-model="signupForm.bik" ng-maxlength="50" required>
+                                        <input type="text"  ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: " name="bik" ng-model="signupForm.bik" ng-maxlength="50" required>
                                         <span class="help-block has-error" ng-if="signup.name.$dirty">
                                           <span ng-show="signup.name.$error.required">bik обязательно для заполнения.</span>
                                           <span ng-show="signup.name.$error.maxlength">bik не может быть более 50 символов.</span>
                                         </span>
                                     </div>
                                 </div>
-                                <label ng-show="clients == '2'" >Лицевой счет получателя :</label>
+                                <label ng-show="Komu_clients == '2'" >Лицевой счет получателя :</label>
                                 <div class="row">
                                     <div class="control-group form-group col-md-12"
                                         ng-class="{'has-error':signup.name.$invalid &&
                                         signup.name.$dirty}">
-                                        <input type="text"  ng-show="clients == '2'" class="form-control" placeholder="Например: " name="num_chet_poluchatelya" ng-model="signupForm.num_chet_poluchatelya" ng-maxlength="50" required>
+                                        <input type="text"  ng-show="Kto_clients == '2'" class="form-control" placeholder="Например: " name="num_chet_poluchatelya" ng-model="signupForm.num_chet_poluchatelya" ng-maxlength="50" required>
                                         <span class="help-block has-error" ng-if="signup.name.$dirty">
                                           <span ng-show="signup.name.$error.required">Лицевой счет получателя обязательно для заполнения.</span>
                                           <span ng-show="signup.name.$error.maxlength">Лицевой счет получателя не может быть более 50 символов.</span>
