@@ -161,14 +161,14 @@ function ($scope, $http) {
   $scope.docZayavleniyaClick = function () {
     $scope.notac = true;
     $scope.backToOne = true;
-    console.log($scope.clients);
+    console.log($scope.Kto_clients);
 
     $scope.addNota = function() {
                   if (!$scope.fiz_name.length) {
                       return;
                   }
-                  if ($scope.clients == 1) {
-                    console.log($scope.clients);
+                  if ($scope.Kto_clients == 1) {
+                    console.log($scope.kto_clients);
                     $scope.fiz_nota = function() {
                       $http.get('/nota_act/create?fiz_name=' + $scope.fiz_name).success(function(data){
 
