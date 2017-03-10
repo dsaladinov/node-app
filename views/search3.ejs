@@ -28,11 +28,12 @@
         <span class="icon-bar"></span>
         </button>
         <!-- This is the brand on the left-hand side. -->
-        <a class="navbar-brand" href="/"> Админ-панель</a>
-        <a class="navbar-brand" href="/#/"> Документы</a>
-        <a class="navbar-brand" href="/#/"> Отчет</a>
-        <a class="navbar-brand" href="/#/"> Поиск</a>
-        <a class="navbar-brand" href="/#/"> Справка</a>
+              <a class="navbar-brand" href="/dashboard"> Админ-панель</a>
+              <a class="navbar-brand" href="/dashboard"> Документы</a>
+              <a class="navbar-brand" href="/reports"> Отчет</a>
+              <a class="navbar-brand" href="/search"> Поиск</a>
+              <a class="navbar-brand" href="/settings"> Настройки</a>
+              <a class="navbar-brand" href="/help"> Справка</a>
 
         <!-- This is what is the above collapse button points to when the mark-up below is collapsed -->
         <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
@@ -158,21 +159,26 @@
     <script src="/js/dependencies/angular.1.3.js"></script>
     <script src="/js/dependencies/tinymce.js"></script>
     <script src="/js/dependencies/angular-ui-tinymce/src/tinymce.js"></script>
+    <script src="/js/dependencies/jquery.js"></script>
+    <script src="/js/dependencies/bootstrap.js"></script>
     <script src="/js/dependencies/angular-toastr.js"></script>
     <script src="/js/dependencies/angular-ui-tinymce/dist/tinymce.min.js"></script>
-    <script src="/js/dependencies/bootstrap.js"></script>
     <script src="/js/dependencies/compareTo.module.js"></script>
-    <script src="/js/dependencies/jquery.js"></script>
     <script src="/js/public/signup/SignupModule.js"></script>
     <script src="/js/private/dashboard/DashboardModule.js"></script>
+    <script src="/js/private/settings/SettingsModule.js"></script>
+    <script src="/js/private/help/HelpModule.js"></script>
     <script src="/js/private/post/PostModule.js"></script>
     <script src="/js/private/nota_act/Nota_actModule.js"></script>
     <script src="/js/public/homepage/HomepageModule.js"></script>
     <script src="/js/private/dashboard/DashboardController.js"></script>
+    <script src="/js/private/help/HelpController.js"></script>
     <script src="/js/private/nota_act/Nota_actController.js"></script>
     <script src="/js/private/post/PostController.js"></script>
-    <script src="/js/private/search.js"></script>
+    <script src="/js/private/report/ReportController.js"></script>
+    <script src="/js/private/report/ReportModule.js"></script>
     <script src="/js/private/search/search.js"></script>
+    <script src="/js/private/settings/SettingsController.js"></script>
     <script src="/js/public/homepage/HomepageController.js"></script>
     <script src="/js/public/signup/SignupController.js"></script>
     <!--SCRIPTS END-->

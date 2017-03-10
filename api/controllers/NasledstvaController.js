@@ -11,6 +11,9 @@ module.exports = {
 		Nasledstva.findAll({
 			include: [{
 				model: Nota_act, as: 'NotactAS', include: [{ model: Spravochnik, as: 'SpravochnikAS'},{ model: Uslugi, as: 'UslugiAS'}]
+			}],
+			include: [{
+				model: Settings, as: 'SettingsAS', include: [{ model: Spravochnik, as: 'SpravochnikAS'},{ model: Uslugi, as: 'UslugiAS'}]
 			}]
 		})
 		.then(function (docs) {

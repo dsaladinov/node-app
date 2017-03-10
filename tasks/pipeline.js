@@ -32,13 +32,18 @@ var jsFilesToInject = [
     'js/dependencies/angular.1.3.js',
     'js/dependencies/tinymce.js',
     'js/dependencies/angular-ui-tinymce/src/tinymce.js',
+    'js/dependencies/jquery.js',
+    'js/dependencies/bootstrap.js',
     'js/dependencies/**/*.js',
+
 
     // All of the rest of your client-side js files
     // will be injected here in no particular order.
 
     'js/public/signup/SignupModule.js',
     'js/private/dashboard/DashboardModule.js',
+    'js/private/settings/SettingsModule.js',
+    'js/private/help/HelpModule.js',
     'js/private/post/PostModule.js',
     'js/private/nota_act/Nota_actModule.js',
     'js/public/homepage/HomepageModule.js',

@@ -22,7 +22,9 @@ module.exports = {
     }
   },
   associations: function () {
-    Prochie_dogovora.hasMany(Nota_act,{as:"NotactAS",foreignKey:'doc_name_id'})
+    Prochie_dogovora.hasMany(Nota_act,{as:"NotactAS",foreignKey:'doc_name_id'}),
+    Prochie_dogovora.hasMany(Settings,{as:"SettingsAS",foreignKey:'doc_name_id'})
+
   },
   options: {
     tableName: "prochie_dogovora",

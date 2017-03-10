@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Управление документами</title>
+  <!-- Viewport mobile tag for sensible mobile support -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <!--STYLES-->
+  <link rel="stylesheet" href="/styles/angular-toastr.css">
+  <link rel="stylesheet" href="/styles/bootstrap.3.1.1.css">
+  <link rel="stylesheet" href="/styles/importer.css">
+  <link rel="stylesheet" href="/styles/styleDashboard.css">
+  <link rel="stylesheet" href="/styles/styleSearch.css">
+  <!--STYLES END-->
+  <!--Added this so the client has access to the csrf tag and it's grabbed first service side on every page -->
+  <script src="http://cloud.tinymce.com/stable/tinymce.min.js?apiKey=kpch0o9bnlaifiig996144rw0ngws4o7urxv5fnxjhcg5u2x"></script>  <script>
+  tinymce.init({
+    selector: '#mytextarea',
+    theme: 'modern',
+    height: 600,
+    plugins: [
+      'advlist autolink link image lists charmap print preview hr anchor pagebreak spellchecker',
+      'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
+      'save table contextmenu directionality emoticons template paste textcolor'
+    ],
+    content_css: 'css/content.css',
+    toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor emoticons'
+
+  });
+  </script>
+</head>
+<body ng-app="SettingsModule" ng-controller="SettingsController" ng-cloak>
+
+  <!-- container = Fixed-width container container-fluid = full-width -->
+  <div class="container-fluid">
+    <!-- Creates the navbar -->
+    <nav class="navbar navbar-default navbar-inverse">
+      <!-- This creates the mechanism for collapse button -->
+      <button type="button" class="navbar-toggle" data-toggle="collapse" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+        <!-- This controls the number of lines in the image when the nav collapse -->
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- This is the brand on the left-hand side. -->
+      <a class="navbar-brand" href="/dashboard"> Админ-панель</a>
+      <a class="navbar-brand" href="/dashboard"> Документы</a>
+      <a class="navbar-brand" href="/reports"> Отчет</a>
+      <a class="navbar-brand" href="/search"> Поиск</a>
+      <a class="navbar-brand" href="/settings"> Настройки</a>
+      <a class="navbar-brand" href="/help"> Справка</a>
+
+      <!-- This is what is the above collapse button points to when the mark-up below is collapsed -->
+      <div class="collapse navbar-collapse" ng-class="!navCollapsed && 'in'">
+        <!-- This is what "styles" the li's as navbar items -->
+        <ul class="nav navbar-nav navbar-right">
+          <!-- navbar-right pulls this element right -->
+          <!-- Using ng-show instead of ng-if because we need this mark-up to be in the dom when signup controller
+          fires.  If it's not there (which it wouldn't be in the case of ng-if) then the scope of the signup
+          controller will not be tied to this element. -->
+          <li>
+            <a href="/logout">выйти</a>
+          </li>
+          <!-- <a ng-controller="signinController" class="btn btn-default navbar-btn navbar-right" href="#" ng-if="!isAuthenticated">sign-in</a> -->
+          <!-- Using ng-show instead of ng-if because we need this mark-up to be in the dom when signup controller
+          fires.  If it's not there (which it wouldn't be in the case of ng-if) then the scope of the signup
+          controller will not be tied to this element. -->
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <form ng-submit="createDoc()" id="settings-form" class="form-signin" name="settings"  method="post">
+
+    <!-- 7 видов договоров -->
+
+    <div class="container">
+          <h2 align="center">Управление документами</h2>
+      <button type="button" class="btn btn-primary" ng-model="backToOne" ng-click="docs()" ng-show="notac">Назад</button>
+      <div class="row" ng-hide="backToOne">
+        <div class="col-md-6 ">
+          <div class="btn-group-vertical btn-block">
+            <a class="btn btn-default" href="#" ng-model="notac" ng-click="docOtchujClick()">
+              <i class="fa fa-file-text fa-4x fa-pull-left" aria-hidden="true"></i>
+              <label>Договоры отчуждения недвижимого имущества</label>
+            </a><br>
+            <a class="btn btn-default " href="#" ng-model="notac" ng-click="docZayavleniyaClick()">
+              <i class="fa fa-file-text-o fa-4x fa-pull-right " aria-hidden="true"></i>
+              <label>Заявления</label>
+            </a><br>
+            <a class="btn btn-default" href="#" ng-model="notac" ng-click="docZaveshaniyaClick()">
+              <i class="fa fa-file-o fa-4x" aria-hidden="true"></i>
+              <label>Завещания</label>
+            </a>
+          </div>
+        </div>
+
+
+        <div class="col-md-6">
+          <div class="btn-group-vertical btn-block">
+            <a class="btn btn-default " href="#" ng-model="notac" ng-click="docDoverennostiClick()">
+              <i class="fa fa-file fa-4x "></i>
+              <label>Доверенности</label>
+            </a>
+            <br>
+            <a class="btn btn-default " href="#" ng-model="notac" ng-click="docNasledstvaClick()">
+              <i class = "fa fa-file-text fa-4x"></i>
+              <label>Нотариальные действия и акты при оформлении наследства</label>
+            </a>
+            <br>
+            <a class="btn btn-default " href="#" ng-model="notac" ng-click="docProchieClick()">
+              <i class = "fa fa-file-text fa-4x"></i>
+              <label>Документы по прочим нотариальным действиям</label>
+            </a>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div class="row" ng-hide="backToOne">
+        <div class="col-md-12">
+          <a class="btn btn-default btn-block" href="#" ng-model="notac" ng-click="docProchieDogovoraClick()">
+            <i class = "fa fa-file-text fa-4x"></i>
+            <label>Прочие договоры</label>
+            </a
+          </div>
+        </div>
+      </div>
+
+      <!-- Нотариальные действия -->
+      <!-- <div class="container"> -->
+      <div class="row" ng-show="notac">
+        <div class="col-md-8">
+          <h2>Нотариальные действия:</h2>
+          <div class="notac form-group">
+            <select data-ng-model="selectedDoc" class="form-control" data-ng-change="docChange(selectedDoc)"
+            data-ng-options="detail.title for detail in docList2 track by detail.id">
+            <option value="">Выберите</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <!-- Конец Нотариальных действий -->
+    <div class="container SetUslugi" ng-show="notac">
+      <div class="row">
+        <div class="col-md-12">
+          <label>Название документа</label>
+          <br>
+          <input type="text" name="title" data-ng-model="title">
+          <input type="submit" class="btn btn-primary" name="submit" value="Добавить">
+        </div>
+      </div>
+    </div>
+    <!-- </div> -->
+    <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+    <!-- </div> -->
+  </form>
+  <!--SCRIPTS-->
+  <script src="/js/dependencies/sails.io.js"></script>
+  <script src="/js/dependencies/angular.1.3.js"></script>
+  <script src="/js/dependencies/tinymce.js"></script>
+  <script src="/js/dependencies/angular-ui-tinymce/src/tinymce.js"></script>
+  <script src="/js/dependencies/jquery.js"></script>
+  <script src="/js/dependencies/bootstrap.js"></script>
+  <script src="/js/dependencies/angular-toastr.js"></script>
+  <script src="/js/dependencies/angular-ui-tinymce/dist/tinymce.min.js"></script>
+  <script src="/js/dependencies/compareTo.module.js"></script>
+  <script src="/js/public/signup/SignupModule.js"></script>
+  <script src="/js/private/dashboard/DashboardModule.js"></script>
+  <script src="/js/private/settings/SettingsModule.js"></script>
+  <script src="/js/private/help/HelpModule.js"></script>
+  <script src="/js/private/post/PostModule.js"></script>
+  <script src="/js/private/nota_act/Nota_actModule.js"></script>
+  <script src="/js/public/homepage/HomepageModule.js"></script>
+  <script src="/js/private/dashboard/DashboardController.js"></script>
+  <script src="/js/private/help/HelpController.js"></script>
+  <script src="/js/private/nota_act/Nota_actController.js"></script>
+  <script src="/js/private/post/PostController.js"></script>
+  <script src="/js/private/report/ReportController.js"></script>
+  <script src="/js/private/report/ReportModule.js"></script>
+  <script src="/js/private/search/search.js"></script>
+  <script src="/js/private/settings/SettingsController.js"></script>
+  <script src="/js/public/homepage/HomepageController.js"></script>
+  <script src="/js/public/signup/SignupController.js"></script>
+  <!--SCRIPTS END-->
+
+</body>
+</html>
