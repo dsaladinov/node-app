@@ -43,9 +43,17 @@ module.exports.routes = {
 
   // User enrollment + authentication
   'POST /signup': 'UserController.signup',
+  'POST user/create': 'UserController.create',
   'PUT /login': 'UserController.login',
+  'GET /user': 'UserController.index',
+
   'GET /logout': 'UserController.logout',
   'GET /posts': 'PostController.index',
+  'GET /settings': 'SettingsController.index',
+  'GET /uslugi': 'SettingsController.uslugi',
+  'GET /documents': 'SettingsController.documents',
+  'GET /reports': 'ReportController.index',
+  'GET /help': 'HelpController.index',
   'POST /nota_act/uploadFile': 'Nota_act.uploadFile'
 
 

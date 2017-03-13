@@ -22,7 +22,9 @@ module.exports = {
     }
   },
   associations: function () {
-    Nasledstva.hasMany(Nota_act,{as:"NotactAS",foreignKey:'doc_name_id'})
+    Nasledstva.hasMany(Nota_act,{as:"NotactAS",foreignKey:'doc_name_id'}),
+    Nasledstva.hasMany(Settings,{as:"SettingsAS",foreignKey:'doc_name_id'})
+
   },
   options: {
     tableName: "nasledstva",

@@ -23,7 +23,8 @@ module.exports = {
 
   },
   associations: function () {
-    Spravochnik.hasMany(Nota_act,{as:"NotactAS",foreignKey:'spr_name_id'})
+    Spravochnik.hasMany(Nota_act,{as:"NotactAS",foreignKey:'spr_name_id'}),
+    Spravochnik.hasMany(Settings,{as:"SettingsAS",foreignKey:'spr_name_id'})
   },
   options: {
     tableName: "spravochnik",

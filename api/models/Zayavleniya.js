@@ -13,7 +13,7 @@ module.exports = {
       field:"id",
       primaryKey: true,
       autoIncrement:true,
-      unique: "id_pkey_zaveshaniya",
+      unique: "id_pkey_zayavleniya",
       allowNull: false
     },
     title: {
@@ -22,7 +22,8 @@ module.exports = {
     }
   },
   associations: function () {
-    Zayavleniya.hasMany(Nota_act,{as:"NotactAS",foreignKey:'doc_name_id'})
+    Zayavleniya.hasMany(Nota_act,{as:"NotactAS",foreignKey:'doc_name_id'}),
+    Zayavleniya.hasMany(Settings,{as:"SettingsAS",foreignKey:'doc_name_id'})
   },
   options: {
     tableName: "zayavlenya",

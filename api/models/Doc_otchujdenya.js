@@ -22,8 +22,8 @@ module.exports = {
     }
   },
   associations: function () {
-  Doc_otchujdenya.hasMany(Nota_act,{as:"NotactAS",foreignKey:'doc_name_id'})
-
+  Doc_otchujdenya.hasMany(Nota_act,{as:"NotactAS",foreignKey:'doc_name_id'}),
+  Doc_otchujdenya.hasMany(Settings,{as:"SettingsAS",foreignKey:'doc_name_id'})
   },
   options: {
     tableName: "doc_otchujdenya",
