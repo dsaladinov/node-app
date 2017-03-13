@@ -46,7 +46,7 @@ module.exports.routes = {
   'POST user/create': 'UserController.create',
   'PUT /login': 'UserController.login',
   'GET /user': 'UserController.index',
-
+  'GET /user/show': 'UserController.show',
   'GET /logout': 'UserController.logout',
   'GET /posts': 'PostController.index',
   'GET /settings': 'SettingsController.index',
