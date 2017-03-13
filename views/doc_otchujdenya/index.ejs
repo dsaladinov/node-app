@@ -7,14 +7,20 @@
   <title>Document</title>
 </head>
 <body>
-  <select class="posts" name="posts" data-model="post">
-    <% _.each(posts, function( post) { %>
-    <option value="<%= post.id %>"><%- post.title %></option>
+  <select class="docs" name="docs" data-model="doc_otchujdenya">
+    <% _.each(docs, function (doc_otchujdenya) { %>
+    <option value="<% doc_otchujdenya.id %>"> <%- doc_otchujdenya.title %></option>
     <% }) %>
   </select>
   <div class="posts" ng-app="PostModule">
       <h1>{{ titles.title}}</h1>
   </div>
+
+  <ul>
+    <% _.each(docs, function (doc_otchujdenya) { %>
+      <li ng-show="docs == 4">doc_otchujdenya.spr_name_id</li>
+    <% }) %>
+  </ul>
 
 </body>
 <!--SCRIPTS-->
@@ -23,31 +29,19 @@
 <script src="/js/dependencies/tinymce.js"></script>
 <script src="/js/dependencies/angular-ui-tinymce/src/tinymce.js"></script>
 <script src="/js/dependencies/jquery.js"></script>
-<<<<<<< HEAD
-=======
-<script src="/js/dependencies/bootstrap.js"></script>
->>>>>>> master
 <script src="/js/dependencies/angular-toastr.js"></script>
 <script src="/js/dependencies/angular-ui-tinymce/dist/tinymce.min.js"></script>
+<script src="/js/dependencies/bootstrap.js"></script>
 <script src="/js/dependencies/compareTo.module.js"></script>
 <script src="/js/public/signup/SignupModule.js"></script>
 <script src="/js/private/dashboard/DashboardModule.js"></script>
-<script src="/js/private/settings/SettingsModule.js"></script>
-<script src="/js/private/help/HelpModule.js"></script>
 <script src="/js/private/post/PostModule.js"></script>
 <script src="/js/private/nota_act/Nota_actModule.js"></script>
 <script src="/js/public/homepage/HomepageModule.js"></script>
 <script src="/js/private/dashboard/DashboardController.js"></script>
-<script src="/js/private/help/HelpController.js"></script>
 <script src="/js/private/nota_act/Nota_actController.js"></script>
 <script src="/js/private/post/PostController.js"></script>
-<<<<<<< HEAD
-=======
-<script src="/js/private/report/ReportController.js"></script>
-<script src="/js/private/report/ReportModule.js"></script>
->>>>>>> master
 <script src="/js/private/search/search.js"></script>
-<script src="/js/private/settings/SettingsController.js"></script>
 <script src="/js/public/homepage/HomepageController.js"></script>
 <script src="/js/public/signup/SignupController.js"></script>
 <!--SCRIPTS END-->

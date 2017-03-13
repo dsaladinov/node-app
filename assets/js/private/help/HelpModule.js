@@ -1,1 +1,0 @@
-angular.module('HelpModule', ['toastr']);

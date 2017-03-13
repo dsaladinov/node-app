@@ -32,8 +32,12 @@ var jsFilesToInject = [
     'js/dependencies/angular.1.3.js',
     'js/dependencies/tinymce.js',
     'js/dependencies/angular-ui-tinymce/src/tinymce.js',
+<<<<<<< HEAD
+    '/js/dependencies/jquery.js',
+=======
     'js/dependencies/jquery.js',
     'js/dependencies/bootstrap.js',
+>>>>>>> master
     'js/dependencies/**/*.js',
 
 
