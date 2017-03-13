@@ -32,12 +32,8 @@ var jsFilesToInject = [
     'js/dependencies/angular.1.3.js',
     'js/dependencies/tinymce.js',
     'js/dependencies/angular-ui-tinymce/src/tinymce.js',
-<<<<<<< HEAD
-    '/js/dependencies/jquery.js',
-=======
     'js/dependencies/jquery.js',
     'js/dependencies/bootstrap.js',
->>>>>>> master
     'js/dependencies/**/*.js',
 
 
@@ -46,6 +42,7 @@ var jsFilesToInject = [
 
     'js/public/signup/SignupModule.js',
     'js/private/dashboard/DashboardModule.js',
+    'js/private/report/ReportModule.js',
     'js/private/settings/SettingsModule.js',
     'js/private/help/HelpModule.js',
     'js/private/post/PostModule.js',
